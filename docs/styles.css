@@ -7,7 +7,7 @@
 }
 *{box-sizing:border-box}
 html,body{margin:0;color:var(--ink);
-  font:22px/1.35 VT323,ui-monospace,Menlo,monospace;
+  font:22px/1.4 VT323,"Noto Sans CJK JP","Hiragino Sans","Yu Gothic","Noto Sans JP",sans-serif;
   padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
 body{
   min-height:100vh;
@@ -16,8 +16,8 @@ body{
     repeating-linear-gradient(0deg, transparent 0 15px, #00000010 15px 16px),
     linear-gradient(180deg, var(--sky) 0 58%, #5ec8ff 58% 62%, var(--grass) 62% 86%, var(--grassd) 86%);
   background-attachment:fixed;
-  image-rendering:pixelated;
 }
+.icon,.hp-pin,.gicon{image-rendering:pixelated;shape-rendering:crispEdges}
 .mono,.tick,.val,table,.hp-meta,.asof{font-family:VT323,ui-monospace,Menlo,monospace}
 a{color:#1040b0;text-decoration:none}a:hover{text-decoration:underline}
 header{padding:18px 16px 14px 16px;position:relative;
