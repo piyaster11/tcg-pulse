@@ -122,94 +122,79 @@ def fetch_wiki():
             wiki["series"][g["id"]] = pts
             log(f"wiki {g['id']}: {len(pts)} days")
         wiki["status"] = "ok"
-        wiki["note"] = "Daily English Wikipedia article views, last ~90 days. Traffic proxy, not Google Trends."
+        wiki["note"] = "Daily English Wikipedia article views, past 90 days. Traffic proxy, not Google Trends."
     except Exception as e:
         log(f"wiki fail: {e}")
         wiki["note"] = f"Pageviews fetch failed: {e}"
     return wiki
 
 def fetch_trends():
+    """One combined 5-keyword request. Warm up cookies first; a bare API call often 429s."""
+    import http.cookiejar
     trends = {"source": None, "status": "fail", "timeframe": "today 3-m", "geo": "Worldwide",
               "series": {}, "related": {}, "note": ""}
-    # Best-effort unofficial widget. A 429 is normal; we then keep Wikipedia as the labeled proxy.
-    try:
-        kws = [g["kw"] for g in GAMES]
-        req = {"comparisonItem": [{"keyword": k, "geo": "", "time": "today 3-m"} for k in kws],
-               "category": 0, "property": ""}
-        url = "https://trends.google.com/trends/api/explore?" + urllib.parse.urlencode({
-            "hl": "en-US", "tz": "-420", "req": json.dumps(req, separators=(",", ":"))
-        })
-        raw = get(url, {"User-Agent": "Mozilla/5.0", "Accept": "application/json"})
-        text = raw.decode("utf-8", "replace")
-        if text.startswith(")]}'"): text = text.split("\n", 1)[-1]
-        data = json.loads(text)
-        widget = next((w for w in data.get("widgets", []) if w.get("token") and (
-            "TIMESERIES" in str(w.get("id", "")).upper() or w.get("type") == "fe_line_chart")), None)
-        if not widget:
-            widget = next((w for w in data.get("widgets", []) if w.get("token")), None)
-        if not widget:
-            raise RuntimeError("no widget")
-        wurl = "https://trends.google.com/trends/api/widgetdata/multiline?" + urllib.parse.urlencode({
-            "hl": "en-US", "tz": "-420",
-            "req": json.dumps(widget["request"], separators=(",", ":")),
-            "token": widget["token"],
-        })
-        raw2 = get(wurl, {"User-Agent": "Mozilla/5.0"})
-        t2 = raw2.decode("utf-8", "replace")
-        if t2.startswith(")]}'"): t2 = t2.split("\n", 1)[-1]
-        wdata = json.loads(t2)
-        timeline = (wdata.get("default") or {}).get("timelineData") or []
-        series = {g["id"]: [] for g in GAMES}
-        for row in timeline:
-            ts = int(row.get("time") or 0)
-            d = datetime.fromtimestamp(ts, timezone.utc).date().isoformat() if ts else str(row.get("formattedTime", ""))[:10]
-            vals = row.get("value") or []
-            for i, g in enumerate(GAMES):
-                v = vals[i] if i < len(vals) else 0
-                series[g["id"]].append({"d": d, "v": int(v) if v is not None else 0})
-        if not any(series.values()):
-            raise RuntimeError("empty series")
-        trends.update(source="Google Trends (public widget API)", status="ok", series=series,
-                      note="Worldwide interest over time, last ~90 days, relative 0–100 across the five queries (not absolute search volume).")
-        log("trends OK")
-    except Exception as e:
-        log(f"trends fail: {type(e).__name__}: {e}")
-        trends["note"] = f"Google Trends blocked ({type(e).__name__}). Wikipedia pageviews used as a labeled proxy."
+    kws = [g["kw"] for g in GAMES]
+    req = {"comparisonItem": [{"keyword": k, "geo": "", "time": "today 3-m"} for k in kws],
+           "category": 0, "property": ""}
+    cj = http.cookiejar.CookieJar()
+    opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
+    ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+    last_err = None
+    for attempt in range(3):
+        try:
+            if attempt:
+                import time as _t; _t.sleep(20 * attempt)
+                log(f"trends retry {attempt+1}/3")
+            reqh = urllib.request.Request("https://trends.google.com/trends/",
+                                          headers={"User-Agent": ua, "Accept-Language": "en-US,en;q=0.9"})
+            opener.open(reqh, timeout=25).read()
+            url = "https://trends.google.com/trends/api/explore?" + urllib.parse.urlencode({
+                "hl": "en-US", "tz": "-420", "req": json.dumps(req, separators=(",", ":"))
+            })
+            raw = opener.open(urllib.request.Request(url, headers={
+                "User-Agent": ua, "Accept": "application/json", "Referer": "https://trends.google.com/trends/explore",
+                "Accept-Language": "en-US,en;q=0.9"}), timeout=25).read()
+            text = raw.decode("utf-8", "replace")
+            if text.startswith(")]}'"): text = text.split("\n", 1)[-1]
+            data = json.loads(text)
+            widget = next((w for w in data.get("widgets", []) if w.get("token") and (
+                "TIMESERIES" in str(w.get("id", "")).upper() or w.get("type") == "fe_line_chart")), None)
+            if not widget:
+                widget = next((w for w in data.get("widgets", []) if w.get("token")), None)
+            if not widget:
+                raise RuntimeError("no widget")
+            wurl = "https://trends.google.com/trends/api/widgetdata/multiline?" + urllib.parse.urlencode({
+                "hl": "en-US", "tz": "-420",
+                "req": json.dumps(widget["request"], separators=(",", ":")),
+                "token": widget["token"],
+            })
+            raw2 = opener.open(urllib.request.Request(wurl, headers={
+                "User-Agent": ua, "Accept": "application/json", "Referer": "https://trends.google.com/trends/explore",
+            }), timeout=25).read()
+            t2 = raw2.decode("utf-8", "replace")
+            if t2.startswith(")]}'"): t2 = t2.split("\n", 1)[-1]
+            wdata = json.loads(t2)
+            timeline = (wdata.get("default") or {}).get("timelineData") or []
+            series = {g["id"]: [] for g in GAMES}
+            for row in timeline:
+                ts = int(row.get("time") or 0)
+                d = datetime.fromtimestamp(ts, timezone.utc).date().isoformat() if ts else str(row.get("formattedTime", ""))[:10]
+                vals = row.get("value") or []
+                for i, g in enumerate(GAMES):
+                    v = vals[i] if i < len(vals) else 0
+                    series[g["id"]].append({"d": d, "v": int(v) if v is not None else 0})
+            if not any(series.values()):
+                raise RuntimeError("empty series")
+            trends.update(source="Google Trends (public widget API)", status="ok", series=series,
+                          fetchedAt=NOW.strftime("%Y-%m-%dT%H:%M:%SZ"),
+                          note="Worldwide interest over time, past 90 days, relative 0–100 across the five queries (not absolute search volume).")
+            log("trends OK")
+            return trends
+        except Exception as e:
+            last_err = e
+            log(f"trends fail attempt {attempt+1}: {type(e).__name__}: {e}")
+    trends["note"] = f"Google Trends blocked ({type(last_err).__name__ if last_err else 'unknown'}). Wikipedia pageviews used as a labeled proxy."
     return trends
-
-FEEDS = [
-    ("Pokémon", "pokemon", "https://news.google.com/rss/search?q=Pokemon+TCG+OR+%22Pokemon+Trading+Card%22+when:7d&hl=en-US&gl=US&ceid=US:en"),
-    ("One Piece", "onepiece", "https://news.google.com/rss/search?q=%22One+Piece+Card+Game%22+OR+%22One+Piece+TCG%22+OR+OP-18+when:14d&hl=en-US&gl=US&ceid=US:en"),
-    ("MTG", "mtg", "https://news.google.com/rss/search?q=%22Magic+the+Gathering%22+OR+%22MTG+Arena%22+when:7d&hl=en-US&gl=US&ceid=US:en"),
-    ("Lorcana", "lorcana", "https://news.google.com/rss/search?q=%22Disney+Lorcana%22+when:14d&hl=en-US&gl=US&ceid=US:en"),
-    ("Yu-Gi-Oh", "yugioh", "https://news.google.com/rss/search?q=%22Yu-Gi-Oh%22+OR+Yugioh+OR+%22Magnificent+Maestros%22+when:14d&hl=en-US&gl=US&ceid=US:en"),
-]
-CURATED_NEWS = [
-    {"title": "Yu-Gi-Oh! TRADING CARD GAME launches Magnificent Maestros, with more Grand Master Rares",
-     "source": "Konami", "link": "https://www.konami.com/games/eu/en/topics/19372/",
-     "utc": "2026-11-12T10:00:00Z", "game": "yugioh", "highlight": True},
-    {"title": "Yu-Gi-Oh! gains 16% as Pokémon falls 8% in November market snapshot",
-     "source": "GempireCards", "link": "https://www.gempirecards.com/news/november-2026-tcg-market-update",
-     "utc": "2026-11-14T12:00:00Z", "game": "yugioh", "highlight": True},
-    {"title": "Pokémon Mega Evolution — Delta Reign hits shelves; Mega Rayquaza ex is the headliner",
-     "source": "Storybook TCG", "link": "https://storybooktcg.com/blogs/tcg-news/this-week-in-tcg-2026-11-09",
-     "utc": "2026-11-09T12:00:00Z", "game": "pokemon", "highlight": True},
-    {"title": "Delta Reign week-1 prices: booster box $193.62 (was $222.95); Mega Rayquaza ex SIR $296.14",
-     "source": "PokeWallet", "link": "https://pokewallet.io/blog/pokemon-delta-reign-prices-week-1-dated",
-     "utc": "2026-11-13T12:00:00Z", "game": "pokemon", "highlight": True},
-    {"title": "Magic: The Gathering | Star Trek is on MTG Arena (Nov 10) and in stores (Nov 13); World Championship 32 at MagicCon: Atlanta",
-     "source": "Wizards of the Coast", "link": "https://magic.wizards.com/en/news/mtg-arena/announcements-november-9-2026",
-     "utc": "2026-11-09T12:00:00Z", "game": "mtg", "highlight": True},
-    {"title": "One Piece OP-18 The Dominance of God lands November 20, with Water Seven and the Holy Knights of God",
-     "source": "Storybook TCG", "link": "https://storybooktcg.com/blogs/tcg-news/this-week-in-tcg-2026-11-09",
-     "utc": "2026-11-09T12:00:00Z", "game": "onepiece", "highlight": True},
-    {"title": "Disney Lorcana bans My Adventure Book in Core Constructed (Nov 3); Hyperia City is the last 2026 set",
-     "source": "TCG Meta", "link": "https://tcgmeta.io/news/tcg-week-in-one-read-delta-reign-lorcana-ban-rc-europe",
-     "utc": "2026-11-08T12:00:00Z", "game": "lorcana", "highlight": True},
-    {"title": "This Week in TCG: Delta Reign lands, Star Trek warps in, OP-18 is next",
-     "source": "Storybook TCG", "link": "https://storybooktcg.com/blogs/tcg-news/this-week-in-tcg-2026-11-09",
-     "utc": "2026-11-09T12:00:00Z", "game": "pokemon", "highlight": True},
-]
 
 def fetch_news():
     items, status = [], {}
