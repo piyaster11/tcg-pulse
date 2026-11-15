@@ -4,10 +4,10 @@
   "games": [
     {
       "id": "pokemon",
-      "name": "Pok\u00e9mon TCG",
-      "short": "Pok\u00e9mon",
+      "name": "Pokémon TCG",
+      "short": "Pokémon",
       "kw": "Pokemon TCG",
-      "wiki": "Pok\u00e9mon_Trading_Card_Game",
+      "wiki": "Pokémon_Trading_Card_Game",
       "color": "#ffcb05",
       "accent": "#3b4cca"
     },
@@ -1926,7 +1926,7 @@
       ]
     },
     "related": {},
-    "note": "Worldwide interest over time, past 90 days, relative 0\u2013100 across the five queries (not absolute search volume).",
+    "note": "Worldwide interest over time, past 90 days, relative 0–100 across the five queries (not absolute search volume).",
     "fetchedAt": "2026-11-15T11:48:12Z"
   },
   "wiki": {
@@ -3750,17 +3750,54 @@
   "news": {
     "updated": "2026-11-15T11:40:05Z",
     "feeds": {
-      "Pok\u00e9mon": "fail: 'ascii' codec can't encode character '\\xe9' in position 39: ordinal not in",
+      "Pokémon": "fail: 'ascii' codec can't encode character '\\xe9' in position 39: ordinal not in",
       "One Piece": "ok (9)",
       "MTG": "ok (100)",
       "Lorcana": "ok (11)",
       "Yu-Gi-Oh": "ok (17)",
       "Wizards": "fail: HTTP Error 404: Not Found",
-      "Pokemon.com": "fail: HTTP Error 404: Not Found"
+      "Pokemon.com": "fail: HTTP Error 404: Not Found",
+      "SNKRDUNK": "ok (8 editorial articles from snkrdunk.com homepage + confirmed article pages)"
     },
     "items": [
       {
-        "title": "Yu-Gi-Oh! gains 16% as Pok\u00e9mon falls 8% in November market snapshot",
+        "title": "【ポケカ】ハドウシーカーの予約・抽選情報まとめ【11/15更新】",
+        "source": "SNKRDUNK",
+        "link": "https://snkrdunk.com/articles/33599/",
+        "utc": "2026-11-15T10:22:52Z",
+        "game": "pokemon",
+        "highlight": true,
+        "breaking": false
+      },
+      {
+        "title": "【ポケカ】スペシャルデッキセットMEGA「メガオーダイル・メガカイリュー・メガゲンガー」相場情報と収録カード一覧",
+        "source": "SNKRDUNK",
+        "link": "https://snkrdunk.com/articles/33739/",
+        "utc": "2026-11-15T10:13:08Z",
+        "game": "pokemon",
+        "highlight": true,
+        "breaking": false
+      },
+      {
+        "title": "【ワンピースカード】神の支配の予約・抽選情報まとめ【11/15更新】",
+        "source": "SNKRDUNK",
+        "link": "https://snkrdunk.com/articles/33504/",
+        "utc": "2026-11-15T03:00:00Z",
+        "game": "onepiece",
+        "highlight": true,
+        "breaking": false
+      },
+      {
+        "title": "【ポケカ30周年】30th CELEBRATION(30th セレブレーション)の当たりランキング/買取相場/封入率/予約抽選/値段まとめ",
+        "source": "SNKRDUNK",
+        "link": "https://snkrdunk.com/articles/30971/",
+        "utc": "2026-11-15T03:00:00Z",
+        "game": "pokemon",
+        "highlight": true,
+        "breaking": false
+      },
+      {
+        "title": "Yu-Gi-Oh! gains 16% as Pokémon falls 8% in November market snapshot",
         "source": "GempireCards",
         "link": "https://www.gempirecards.com/news/november-2026-tcg-market-update",
         "utc": "2026-11-14T12:00:00Z",
@@ -3787,7 +3824,7 @@
         "breaking": false
       },
       {
-        "title": "Pok\u00e9mon Mega Evolution \u2014 Delta Reign hits shelves; Mega Rayquaza ex is the headliner",
+        "title": "Pokémon Mega Evolution — Delta Reign hits shelves; Mega Rayquaza ex is the headliner",
         "source": "Storybook TCG",
         "link": "https://storybooktcg.com/blogs/tcg-news/this-week-in-tcg-2026-11-09",
         "utc": "2026-11-09T12:00:00Z",
@@ -3832,7 +3869,7 @@
         "breaking": false
       },
       {
-        "title": "The best early Pok\u00e9mon Black Friday deals: Shop live deals on 30th Celebration, Delta Reign, and more",
+        "title": "The best early Pokémon Black Friday deals: Shop live deals on 30th Celebration, Delta Reign, and more",
         "source": "Mashable",
         "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5IMTFsWVlkWG9pVGNCejJlaHRNR3doYkJzUURpUURLTGQ3RGM3X3YzY1hCTERSUU5zMVZnY0MyNWRHcWU2YWlIWlhXY1k4Z3loYTRXQjFJVUVnX1JuVjRhOWQxNnNJV2UzUURlZmwyMDZpSTdFbmpJ?oc=5",
         "utc": "2026-11-15T09:03:18Z",
@@ -3841,106 +3878,7 @@
         "breaking": true
       },
       {
-        "title": "10 Most Valuable Mega Evolution Pok\u00e9mon Cards, Ranked by Price",
-        "source": "Comic Book Resources",
-        "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPdllRSTR5SkpuWjlKY2dHMU95UFNta056NE5VY1JCcGM5RW1BdEd4ZmE2X3A3VUxINFh3TGFKd0M1RkdpR3JFMkhtUnFXbExUdFJBWm9VNU1CWTlXd3ZIVUdRUkh1X1B3S2dFWEEtMUZzd2hGRzdPblBUUm43SXcyaFJKRWp1QQ?oc=5",
-        "utc": "2026-11-15T03:45:00Z",
-        "game": "pokemon",
-        "highlight": false,
-        "breaking": false
-      },
-      {
-        "title": "Pokemon Tcg PSA Counterfeiting Scheme Could Be a Huge Problem for Collectors",
-        "source": "IMDb",
-        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5nR09qbkVBcWE1aUJEcklDZXJTeHE2Qm9DY0t3U01zVUVVUmtrVXliQ3dOUHRmQ19GVG1IbHgwRFhRR2xYbS1QZjBNZUFCWUJUNU5EallHNGJCaTFCUWxpYnpyVllZaVE?oc=5",
-        "utc": "2026-11-15T01:24:05Z",
-        "game": "pokemon",
-        "highlight": false,
-        "breaking": false
-      },
-      {
-        "title": "10 Most Valuable Pok\u00e9mon Cards From 2026, Ranked by Price",
-        "source": "Comic Book Resources",
-        "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1rbzlJeHpiV2RJdS10SXIySWUteE5oQkRST3YxTTBtQ1N0ZWx2TWFoRy1zbnBoeTdSZ21lLXBUVWxoOVplWVdPR25vYVpKNkVjS2wzcDlYeVFVR3JwUm5mRmV6NEVRYzJDQUxmZENNU29kR0pybHhkeQ?oc=5",
-        "utc": "2026-11-14T23:15:12Z",
-        "game": "pokemon",
-        "highlight": false,
-        "breaking": false
-      },
-      {
-        "title": "Recapping the recent Pokemon TCG PH Controversy",
-        "source": "Inquirer Technology",
-        "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPY3RRRUFKTV8yalc0X0ZYTEZwLUdvam1VQWtoM3pLcWZmMEZ2dEtVRWNHNlpheFg2dmVyWF9scU9kVFBsOUZ0T3FzVTZCWi1xQU5jdF92Z2RHSFFpc3FLc2tkeWw2Q2FRRkhtMkNnZUpRYmNIamFNcTVYU0lwNmpZMjVfcjNFdVdOb2tZOVo4TdIBlAFBVV95cUxQNXZSMzBqdUQwMGQwbkVrdTBMT0pQRHE0aEdmTVF1YUxlUjZZeWxWdUw3MzRNT0tpY0hMN3ZzR3ZkYkRmc1g4Y3pZQWRmSG9RZS1LaGxXMm5sZUVLMWJLSW4xOVJXaDlvMThrMV8xRF9UMVlGQjFycXpLY0NHeEdvb1I5QXNOLW9WT0xxS1RuOXBia1Fw?oc=5",
-        "utc": "2026-11-14T14:15:00Z",
-        "game": "pokemon",
-        "highlight": false,
-        "breaking": false
-      },
-      {
-        "title": "New Pok\u00e9mon TCG Release Unveiled For January 2027, Before Flowing Fists",
-        "source": "ScreenRant",
-        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBFc1p3ZVE4a09LcjNNX0s1a0NKd1IyMzg2VjdlSVBoZjczb0tya1h6UzBYamdBMFRab1dxNEJlaWxPQkVkeVdVR1FNbUI0ckphMDY5WjNLdnJKTnFfQVhXZlJvcmllcjhtbk81ZXJjZVBwYnJ2YXc?oc=5",
-        "utc": "2026-11-13T22:18:10Z",
-        "game": "pokemon",
-        "highlight": false,
-        "breaking": false
-      },
-      {
-        "title": "One Piece OP-18 Card List: The Dominance of God",
-        "source": "www.thornberrymedia.com",
-        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9HNDhubnNOMXZUTE01MGt4eU9objlIR2NLVWIwQ3hYLU5QSjNXcXpYMGVLZnZ0blNfSVpPVFRsX2tka1VhS1UtcXUzSG15UFJjeGFRZ2hGXzFyUXlRalZQRl9PbERVTlBYMnpoOGQ4dw?oc=5",
-        "utc": "2026-11-13T15:00:08Z",
-        "game": "onepiece",
-        "highlight": false,
-        "breaking": false
-      },
-      {
-        "title": "OP-18 Roronoa Zoro (OP18-092): Broken for Red/Black Sabo?",
-        "source": "www.thornberrymedia.com",
-        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9mR2tEX0VBVndtQjRlV2NJbzNQZ0REVWFfNU5sVjM3d0JiWkdweDJ5LUJ4VGFmTzFMd0VoZ1ZORjIwSFh4cE5YdDB3a0h5dnRRTGJHUzRuWE4yS1ppZjAtbjNfX05xN2stMmE0MUVR?oc=5",
-        "utc": "2026-11-12T18:38:30Z",
-        "game": "onepiece",
-        "highlight": false,
-        "breaking": false
-      },
-      {
-        "title": "One Piece Card Game November Booster Packs Reveal (Release Date, Price, and Details)",
-        "source": "VICE",
-        "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNQkN3SXh5cUZJVl95bTFfOTlCNXVqX29PN0wyYUZpdzB6eUR2dUk5OVhvZXBCNUpQSnVwVE5BRnRMWWRyREpXS29UOUlhNkIyR0FibUVaT19XOV9GcjdZNFZuV1RNVVVpMGFuY1BIcmdNRHBuZ1BIcUxLYXpUWFJjMGJJR21mQXhNSlNWNjBaZ0RjdnFPMlRnYlIwdG1IeVp5YVN6c0JSazNMRFRGbkdwc0NCcw?oc=5",
-        "utc": "2026-11-11T18:21:50Z",
-        "game": "onepiece",
-        "highlight": false,
-        "breaking": false
-      },
-      {
-        "title": "OP-18 Franky Deck List: Best Early Cards, Combos & Build Ideas",
-        "source": "www.thornberrymedia.com",
-        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBCd1p0WUlrN1BiWFA1NF9XSzJiUnBuejNodE43clNvSkdDdEh0LW1lOXJUeU9INm95ekZBV3hBVmpHcVNYc2NEVkpxODhkTmJhQ1dGM3VDU1hGTmlNYzYxVDBteklhQU12Rngw?oc=5",
-        "utc": "2026-11-07T03:33:55Z",
-        "game": "onepiece",
-        "highlight": false,
-        "breaking": false
-      },
-      {
-        "title": "OP-18 Green Luffy Deck List: Best Early Cards, Combos & Build Ideas",
-        "source": "www.thornberrymedia.com",
-        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBiNTFmUnJoUGkzeDlabGxkY3AtTU1FTGt3cTVqeUpRQUk2d2VPblE5eXRMTDlxa1JzMmRvMFVhNmE5U1ZNM0pUMlJNOG1XSWlaXzVpWDB1MTUyRjlhQm5qSWs3MXRMWHVBSXU5R1ZsWkllZw?oc=5",
-        "utc": "2026-11-06T16:31:50Z",
-        "game": "onepiece",
-        "highlight": false,
-        "breaking": false
-      },
-      {
-        "title": "Nico Robin P :Unopened [P-111](Promotional Card \"Official Playmat Nami & Robin\")",
-        "source": "SNKRDUNK",
-        "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE81TWE1V1lHbWdXV1ZJS04xb1ZKS3pKUW5zZEVRdWhCeFVTcHdIZHhNOS1yOHhOSnFJYTB2R1ZlZE4yYTdtdE12OUNJbFd5Z2RxcGRrWFFfbw?oc=5",
-        "utc": "2026-11-06T08:00:00Z",
-        "game": "onepiece",
-        "highlight": false,
-        "breaking": false
-      },
-      {
-        "title": "Video Development Diary Teases Netflix\u2019s \u2018Magic The Gathering\u2019 Series \u2018Planeswalker,\u2019 Coming In 2027",
+        "title": "Video Development Diary Teases Netflix’s ‘Magic The Gathering’ Series ‘Planeswalker,’ Coming In 2027",
         "source": "Cartoon Brew",
         "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONDNIUEl6bnZCY1FQa193dkFfR1NLdEtwZXZJSnpkbkgtbVhBelBuMGJaSGs5c1VXMVI4T0NqVHI5aTNDYWJzNlQ3cnQ1ZkJTY0pwcEZTMFllSUViSnV3VExDNjVtQS0tY0JSWjlKV2JxSjR0UHNNZURubW1idHFuM1ozcFM1ZTNXTHRuU2IyVExoM3E2QVJ1cThmMTg5ZGM?oc=5",
         "utc": "2026-11-15T08:29:26Z",
@@ -3967,6 +3905,42 @@
         "breaking": true
       },
       {
+        "title": "10 Most Valuable Mega Evolution Pokémon Cards, Ranked by Price",
+        "source": "Comic Book Resources",
+        "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPdllRSTR5SkpuWjlKY2dHMU95UFNta056NE5VY1JCcGM5RW1BdEd4ZmE2X3A3VUxINFh3TGFKd0M1RkdpR3JFMkhtUnFXbExUdFJBWm9VNU1CWTlXd3ZIVUdRUkh1X1B3S2dFWEEtMUZzd2hGRzdPblBUUm43SXcyaFJKRWp1QQ?oc=5",
+        "utc": "2026-11-15T03:45:00Z",
+        "game": "pokemon",
+        "highlight": false,
+        "breaking": false
+      },
+      {
+        "title": "【ポケカ】ストームエメラルダの再販はいつ？再販入荷情報まとめ【11/15更新】",
+        "source": "SNKRDUNK",
+        "link": "https://snkrdunk.com/articles/32892/",
+        "utc": "2026-11-15T03:00:00Z",
+        "game": "pokemon",
+        "highlight": false,
+        "breaking": false
+      },
+      {
+        "title": "【ポケカ】ミュウ R/RGBの買取・相場価格と値段推移｜30th CELEBRATION(30th セレブレーション)",
+        "source": "SNKRDUNK",
+        "link": "https://snkrdunk.com/articles/33322/",
+        "utc": "2026-11-15T03:00:00Z",
+        "game": "pokemon",
+        "highlight": false,
+        "breaking": false
+      },
+      {
+        "title": "Pokemon Tcg PSA Counterfeiting Scheme Could Be a Huge Problem for Collectors",
+        "source": "IMDb",
+        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5nR09qbkVBcWE1aUJEcklDZXJTeHE2Qm9DY0t3U01zVUVVUmtrVXliQ3dOUHRmQ19GVG1IbHgwRFhRR2xYbS1QZjBNZUFCWUJUNU5EallHNGJCaTFCUWxpYnpyVllZaVE?oc=5",
+        "utc": "2026-11-15T01:24:05Z",
+        "game": "pokemon",
+        "highlight": false,
+        "breaking": false
+      },
+      {
         "title": "Planeswalker, Netflix's Magic: The Gathering animated series, will have a different art style for each plane",
         "source": "PC Gamer",
         "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPOTNTQVhycmRjS0w0b1pDRE56ZHdZRmM5NlE5WXRoc1FJVlBzWFRDcHVqX1VfZTg5NU9MRlV1ZkZHNjZQV0Z2Zm9wUVNhR21hRllaRE9rdmNDeGt4WDRWVmdwYVlncWI0WDh4ek5jMHlGZU1nTG1sdGVWTVdqajdOUG9DZHUwQUtvVm5ZWlFSVHUzZXB5VUxNY2NVVzNBbk5peF9iUGNjWC1ldjVHLWlZN3c3ZC12RWZ3ckdVWk9sTkozQ0R2dG1rMFBTNFNtbUZMYUFfaGxB?oc=5",
@@ -3976,7 +3950,16 @@
         "breaking": false
       },
       {
-        "title": "Magic: The Gathering\u2019s First Signed Star Trek Card Has Been Pulled",
+        "title": "10 Most Valuable Pokémon Cards From 2026, Ranked by Price",
+        "source": "Comic Book Resources",
+        "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1rbzlJeHpiV2RJdS10SXIySWUteE5oQkRST3YxTTBtQ1N0ZWx2TWFoRy1zbnBoeTdSZ21lLXBUVWxoOVplWVdPR25vYVpKNkVjS2wzcDlYeVFVR3JwUm5mRmV6NEVRYzJDQUxmZENNU29kR0pybHhkeQ?oc=5",
+        "utc": "2026-11-14T23:15:12Z",
+        "game": "pokemon",
+        "highlight": false,
+        "breaking": false
+      },
+      {
+        "title": "Magic: The Gathering’s First Signed Star Trek Card Has Been Pulled",
         "source": "IMDb",
         "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFAyNjlPX3BkNG9qTG1KZDNrYXBwbEVLQjZVTjdMdy1Xak84cmZjcGNsYXI3N0xjOHJBenphM1hlMklxdWw3UDZVRzhSWmdPSHNiOEpiTl9uRTA1eTd2VnFwcElsVnJpUWc?oc=5",
         "utc": "2026-11-14T22:15:35Z",
@@ -3985,11 +3968,65 @@
         "breaking": false
       },
       {
-        "title": "Magic: The Gathering Star Trek Perfectly Captures the Sci-Fi Show\u2019s Most Brutal Running Joke",
+        "title": "Magic: The Gathering Star Trek Perfectly Captures the Sci-Fi Show’s Most Brutal Running Joke",
         "source": "IMDb",
         "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9sRWJqN1pXR0FBaVhTZjh5VUdvRVRTZzdTQjRNNWdOLU9aS3JJbWg1Z1VFRWdwZFJUYnJ1UzhKeXQ5S3ZrR3JqOTdBLVdxYldZNnI4aHFxYTlQQWdMTTdYMHBCd28zbnB2ajBtZXRR?oc=5",
         "utc": "2026-11-14T21:27:26Z",
         "game": "mtg",
+        "highlight": false,
+        "breaking": false
+      },
+      {
+        "title": "Recapping the recent Pokemon TCG PH Controversy",
+        "source": "Inquirer Technology",
+        "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPY3RRRUFKTV8yalc0X0ZYTEZwLUdvam1VQWtoM3pLcWZmMEZ2dEtVRWNHNlpheFg2dmVyWF9scU9kVFBsOUZ0T3FzVTZCWi1xQU5jdF92Z2RHSFFpc3FLc2tkeWw2Q2FRRkhtMkNnZUpRYmNIamFNcTVYU0lwNmpZMjVfcjNFdVdOb2tZOVo4TdIBlAFBVV95cUxQNXZSMzBqdUQwMGQwbkVrdTBMT0pQRHE0aEdmTVF1YUxlUjZZeWxWdUw3MzRNT0tpY0hMN3ZzR3ZkYkRmc1g4Y3pZQWRmSG9RZS1LaGxXMm5sZUVLMWJLSW4xOVJXaDlvMThrMV8xRF9UMVlGQjFycXpLY0NHeEdvb1I5QXNOLW9WT0xxS1RuOXBia1Fw?oc=5",
+        "utc": "2026-11-14T14:15:00Z",
+        "game": "pokemon",
+        "highlight": false,
+        "breaking": false
+      },
+      {
+        "title": "Sponsored: 'Yu-Gi-Oh! TCG's' 'Glorious Victors' Brings New Strategies and Premium Rarities This December",
+        "source": "ICv2",
+        "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNMDY3dTFTWlpfcm5pZmk5VXQ1WHpxQTI5NURUSTdzQ1V2UDhLNS1aaVNTNTBYNFFTSWlUYnJvSDctSVNLcDM1Z2JjVWtISlJPRTJPd2w5ZHNaR1dQV0VhRllyTXgxRzV6WERjZ3FqN2owdm9UN1NMcVhhRHpDTkg1LTc5Qy1fS0l0RHdBZFVWUGxtSzlBU2JsMXVJTVZKc0NxX09fX1YyXzlZTkk4OHdaMk9xeExwYWRub21oSURSNzJKVzBCaFY5aXMwOGpnandoUkdZMzZNWQ?oc=5",
+        "utc": "2026-11-13T22:28:13Z",
+        "game": "yugioh",
+        "highlight": false,
+        "breaking": false
+      },
+      {
+        "title": "New Pokémon TCG Release Unveiled For January 2027, Before Flowing Fists",
+        "source": "ScreenRant",
+        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBFc1p3ZVE4a09LcjNNX0s1a0NKd1IyMzg2VjdlSVBoZjczb0tya1h6UzBYamdBMFRab1dxNEJlaWxPQkVkeVdVR1FNbUI0ckphMDY5WjNLdnJKTnFfQVhXZlJvcmllcjhtbk81ZXJjZVBwYnJ2YXc?oc=5",
+        "utc": "2026-11-13T22:18:10Z",
+        "game": "pokemon",
+        "highlight": false,
+        "breaking": false
+      },
+      {
+        "title": "One Piece OP-18 Card List: The Dominance of God",
+        "source": "www.thornberrymedia.com",
+        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9HNDhubnNOMXZUTE01MGt4eU9objlIR2NLVWIwQ3hYLU5QSjNXcXpYMGVLZnZ0blNfSVpPVFRsX2tka1VhS1UtcXUzSG15UFJjeGFRZ2hGXzFyUXlRalZQRl9PbERVTlBYMnpoOGQ4dw?oc=5",
+        "utc": "2026-11-13T15:00:08Z",
+        "game": "onepiece",
+        "highlight": false,
+        "breaking": false
+      },
+      {
+        "title": "NEW 'YU-GI-OH! TCG' STRUCTURE DECK INCOMING",
+        "source": "ICv2",
+        "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQTGxlY3M5dkh5VnNXbVhSS0tfNWdtQkFSbnoxT0tJeUhPR2R0dHdfam9qc1NRS1FiLV9hRWtELUZ5X0lhdFhCN0haZE9XWmNzbG9yWnRtSzVqenZEUkcwMGxfTHNicFdoNk1ac0FXcEd5MzVVTVVOZWx4MzNfRzd2WEE3Ml9RaXcxNnc?oc=5",
+        "utc": "2026-11-13T14:53:35Z",
+        "game": "yugioh",
+        "highlight": false,
+        "breaking": false
+      },
+      {
+        "title": "Best Pokémon TCG deal: Ascended Heroes Elite Trainer Box gets rare discount",
+        "source": "Mashable",
+        "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUXg1a2F3RzBiU25EU2luOVFqVXdnckpZU1d5MXRoUXJwcEFnYUlkczBMc0EyTGlrSmo1dWpIeEVsN0h4ZWZ5d3dqOWRTQmVhOWxURXd5a1lNbXhDUUcyRlZnVGFtVHdYcHpGRGtMRTZNNGsyQVFVeXowWXJiN0ZZV1p5Uk1wRkcxTjdz?oc=5",
+        "utc": "2026-11-13T13:07:23Z",
+        "game": "yugioh",
         "highlight": false,
         "breaking": false
       },
@@ -3999,6 +4036,60 @@
         "link": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOODM3aGNMTnJDdzdkclJYX2RRbE9OQk9rQXBRcERKbWlfeXh6MjRpOFFVSmdYenlfdHJ3NlBGQWF3bFZOYUZGU2Y0R2daMUxxVHVURENBS0s2ZmZ6dGF2czNCUUJPMDladlAyTTVoSTJUc2ZEcHlPNl9WTDh6dE91ZmlZSGVFYUpSWExoT3lSbFRVMkNnRXl0TjZ2OGgzTTV1WWV4S29pZkVFQ3R5eUFGZDRaalFtY2VaMTVQd09wakpkaVVLaWo1X19tYTNISlBmTXVuZUZvYTFGQm5qb29QOC1JVjJCUDJYckE3QWp4RE9aa2xRdzlGb2NGSmNpZUI1ZjV0cGZnSWx0VzBSNVE?oc=5",
         "utc": "2026-11-13T10:15:00Z",
         "game": "lorcana",
+        "highlight": false,
+        "breaking": false
+      },
+      {
+        "title": "Yu-Gi-Oh! TCG unveils Magnificent Maestros",
+        "source": "Toy World Magazine",
+        "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9tM2xVUC1ZXzhQN25GWloyUmNUdFdScHhLdXZOQ2VWVGlBS0lyZVZRbElOR3o0anhDVnN6SkgyT215ZVJZenJIVVBNT3BIR1BaSWk3a0dxLU5kMjB3YmNlWVpPVmZLTzFYUW9vYWxGOXB2ZzN5clhr?oc=5",
+        "utc": "2026-11-13T09:36:49Z",
+        "game": "yugioh",
+        "highlight": false,
+        "breaking": false
+      },
+      {
+        "title": "【ワンピ新弾】ONE PIECE Heroines Edition vol.2の当たりカード情報",
+        "source": "SNKRDUNK",
+        "link": "https://snkrdunk.com/articles/33110/",
+        "utc": "2026-11-13T07:44:00Z",
+        "game": "onepiece",
+        "highlight": false,
+        "breaking": false
+      },
+      {
+        "title": "Yu-Gi-Oh!’s Blue-Eyes White Dragon Returns In New Release Out Today",
+        "source": "Comic Book Resources",
+        "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNbm5nXy15ZnpLYk1HTWpBTV9SV3NnSlNRTWI2RmxRaXdSc0FuaGlnYlZyNXZOM0xMX0NscFV3SDMyNWpITGhINDZySEpqLUJVaDBacXlaLTB5MXdzUVd6N2x1aHBSeUlvdURnc3J0MHc0VDYyektiaF93WGxMalNCaHE1U045QQ?oc=5",
+        "utc": "2026-11-12T20:20:12Z",
+        "game": "yugioh",
+        "highlight": false,
+        "breaking": false
+      },
+      {
+        "title": "OP-18 Roronoa Zoro (OP18-092): Broken for Red/Black Sabo?",
+        "source": "www.thornberrymedia.com",
+        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9mR2tEX0VBVndtQjRlV2NJbzNQZ0REVWFfNU5sVjM3d0JiWkdweDJ5LUJ4VGFmTzFMd0VoZ1ZORjIwSFh4cE5YdDB3a0h5dnRRTGJHUzRuWE4yS1ppZjAtbjNfX05xN2stMmE0MUVR?oc=5",
+        "utc": "2026-11-12T18:38:30Z",
+        "game": "onepiece",
+        "highlight": false,
+        "breaking": false
+      },
+      {
+        "title": "Shining a Spotlight on its Iconic Dueling Maestros, Yu-Gi-Oh! TRADING CARD GAME Launches Magnificent Maestros",
+        "source": "KONAMI GROUP CORPORATION",
+        "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9tUUVEUlZzRjRESGNHX2JCdVlVTHo5bVVaaVpha3k4a293aE5jUjBwcnpFc2JMUmlsNno3anNlRDh3S3JqTmljZk04X0EwdWI5Z3BmaEM4YVBYaDNL?oc=5",
+        "utc": "2026-11-12T11:31:39Z",
+        "game": "yugioh",
+        "highlight": false,
+        "breaking": false
+      },
+      {
+        "title": "One Piece Card Game November Booster Packs Reveal (Release Date, Price, and Details)",
+        "source": "VICE",
+        "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNQkN3SXh5cUZJVl95bTFfOTlCNXVqX29PN0wyYUZpdzB6eUR2dUk5OVhvZXBCNUpQSnVwVE5BRnRMWWRyREpXS29UOUlhNkIyR0FibUVaT19XOV9GcjdZNFZuV1RNVVVpMGFuY1BIcmdNRHBuZ1BIcUxLYXpUWFJjMGJJR21mQXhNSlNWNjBaZ0RjdnFPMlRnYlIwdG1IeVp5YVN6c0JSazNMRFRGbkdwc0NCcw?oc=5",
+        "utc": "2026-11-11T18:21:50Z",
+        "game": "onepiece",
         "highlight": false,
         "breaking": false
       },
@@ -4030,11 +4121,29 @@
         "breaking": false
       },
       {
+        "title": "OP-18 Franky Deck List: Best Early Cards, Combos & Build Ideas",
+        "source": "www.thornberrymedia.com",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBCd1p0WUlrN1BiWFA1NF9XSzJiUnBuejNodE43clNvSkdDdEh0LW1lOXJUeU9INm95ekZBV3hBVmpHcVNYc2NEVkpxODhkTmJhQ1dGM3VDU1hGTmlNYzYxVDBteklhQU12Rngw?oc=5",
+        "utc": "2026-11-07T03:33:55Z",
+        "game": "onepiece",
+        "highlight": false,
+        "breaking": false
+      },
+      {
         "title": "Welcome to Hyperia City in Disney Lorcana",
         "source": "Rocket Chainsaw",
         "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPeFZCRno0cGF2akZFN1JpU0FHMnBOZjVfTzN3OGN6SUlvOUk1aGNhazZHS3hsdzFLVFVxVmhzcFpoSUEzQWN0aG12ejhPaWVXMUFwWUNFV2xyTkhrOHg5TEM2UXpST0tTaGdvejJqekM5eHowR2hQbkJRWm9ITV9KOTdn?oc=5",
         "utc": "2026-11-06T21:05:03Z",
         "game": "lorcana",
+        "highlight": false,
+        "breaking": false
+      },
+      {
+        "title": "OP-18 Green Luffy Deck List: Best Early Cards, Combos & Build Ideas",
+        "source": "www.thornberrymedia.com",
+        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBiNTFmUnJoUGkzeDlabGxkY3AtTU1FTGt3cTVqeUpRQUk2d2VPblE5eXRMTDlxa1JzMmRvMFVhNmE5U1ZNM0pUMlJNOG1XSWlaXzVpWDB1MTUyRjlhQm5qSWs3MXRMWHVBSXU5R1ZsWkllZw?oc=5",
+        "utc": "2026-11-06T16:31:50Z",
+        "game": "onepiece",
         "highlight": false,
         "breaking": false
       },
@@ -4048,55 +4157,10 @@
         "breaking": false
       },
       {
-        "title": "Sponsored: 'Yu-Gi-Oh! TCG's' 'Glorious Victors' Brings New Strategies and Premium Rarities This December",
-        "source": "ICv2",
-        "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNMDY3dTFTWlpfcm5pZmk5VXQ1WHpxQTI5NURUSTdzQ1V2UDhLNS1aaVNTNTBYNFFTSWlUYnJvSDctSVNLcDM1Z2JjVWtISlJPRTJPd2w5ZHNaR1dQV0VhRllyTXgxRzV6WERjZ3FqN2owdm9UN1NMcVhhRHpDTkg1LTc5Qy1fS0l0RHdBZFVWUGxtSzlBU2JsMXVJTVZKc0NxX09fX1YyXzlZTkk4OHdaMk9xeExwYWRub21oSURSNzJKVzBCaFY5aXMwOGpnandoUkdZMzZNWQ?oc=5",
-        "utc": "2026-11-13T22:28:13Z",
-        "game": "yugioh",
-        "highlight": false,
-        "breaking": false
-      },
-      {
-        "title": "NEW 'YU-GI-OH! TCG' STRUCTURE DECK INCOMING",
-        "source": "ICv2",
-        "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQTGxlY3M5dkh5VnNXbVhSS0tfNWdtQkFSbnoxT0tJeUhPR2R0dHdfam9qc1NRS1FiLV9hRWtELUZ5X0lhdFhCN0haZE9XWmNzbG9yWnRtSzVqenZEUkcwMGxfTHNicFdoNk1ac0FXcEd5MzVVTVVOZWx4MzNfRzd2WEE3Ml9RaXcxNnc?oc=5",
-        "utc": "2026-11-13T14:53:35Z",
-        "game": "yugioh",
-        "highlight": false,
-        "breaking": false
-      },
-      {
-        "title": "Best Pok\u00e9mon TCG deal: Ascended Heroes Elite Trainer Box gets rare discount",
-        "source": "Mashable",
-        "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUXg1a2F3RzBiU25EU2luOVFqVXdnckpZU1d5MXRoUXJwcEFnYUlkczBMc0EyTGlrSmo1dWpIeEVsN0h4ZWZ5d3dqOWRTQmVhOWxURXd5a1lNbXhDUUcyRlZnVGFtVHdYcHpGRGtMRTZNNGsyQVFVeXowWXJiN0ZZV1p5Uk1wRkcxTjdz?oc=5",
-        "utc": "2026-11-13T13:07:23Z",
-        "game": "yugioh",
-        "highlight": false,
-        "breaking": false
-      },
-      {
-        "title": "Yu-Gi-Oh! TCG unveils Magnificent Maestros",
-        "source": "Toy World Magazine",
-        "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9tM2xVUC1ZXzhQN25GWloyUmNUdFdScHhLdXZOQ2VWVGlBS0lyZVZRbElOR3o0anhDVnN6SkgyT215ZVJZenJIVVBNT3BIR1BaSWk3a0dxLU5kMjB3YmNlWVpPVmZLTzFYUW9vYWxGOXB2ZzN5clhr?oc=5",
-        "utc": "2026-11-13T09:36:49Z",
-        "game": "yugioh",
-        "highlight": false,
-        "breaking": false
-      },
-      {
-        "title": "Yu-Gi-Oh!\u2019s Blue-Eyes White Dragon Returns In New Release Out Today",
-        "source": "Comic Book Resources",
-        "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNbm5nXy15ZnpLYk1HTWpBTV9SV3NnSlNRTWI2RmxRaXdSc0FuaGlnYlZyNXZOM0xMX0NscFV3SDMyNWpITGhINDZySEpqLUJVaDBacXlaLTB5MXdzUVd6N2x1aHBSeUlvdURnc3J0MHc0VDYyektiaF93WGxMalNCaHE1U045QQ?oc=5",
-        "utc": "2026-11-12T20:20:12Z",
-        "game": "yugioh",
-        "highlight": false,
-        "breaking": false
-      },
-      {
-        "title": "Shining a Spotlight on its Iconic Dueling Maestros, Yu-Gi-Oh! TRADING CARD GAME Launches Magnificent Maestros",
-        "source": "KONAMI GROUP CORPORATION",
-        "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9tUUVEUlZzRjRESGNHX2JCdVlVTHo5bVVaaVpha3k4a293aE5jUjBwcnpFc2JMUmlsNno3anNlRDh3S3JqTmljZk04X0EwdWI5Z3BmaEM4YVBYaDNL?oc=5",
-        "utc": "2026-11-12T11:31:39Z",
+        "title": "【遊戯王OCG】本日発売！「IMMORTAL PHOENIX」当たりカードの初動相場を一挙紹介！",
+        "source": "SNKRDUNK",
+        "link": "https://snkrdunk.com/articles/33647/",
+        "utc": "2026-10-31T03:09:00Z",
         "game": "yugioh",
         "highlight": false,
         "breaking": false
@@ -4112,14 +4176,14 @@
       "hits": 5,
       "method": "simple headline lexicon (pos/neg word counts, shrunk toward 50)",
       "sample": [
-        "The best early Pok\u00e9mon Black Friday deals: Shop live deals on 30th Celebration, Delta Reign, and more",
-        "10 Most Valuable Mega Evolution Pok\u00e9mon Cards, Ranked by Price",
+        "The best early Pokémon Black Friday deals: Shop live deals on 30th Celebration, Delta Reign, and more",
+        "10 Most Valuable Mega Evolution Pokémon Cards, Ranked by Price",
         "Pokemon Tcg PSA Counterfeiting Scheme Could Be a Huge Problem for Collectors",
-        "10 Most Valuable Pok\u00e9mon Cards From 2026, Ranked by Price",
+        "10 Most Valuable Pokémon Cards From 2026, Ranked by Price",
         "Recapping the recent Pokemon TCG PH Controversy",
-        "Pokemon TCG Collection with a mostly completed Pok\u00e9dex towards the end",
-        "The best early Black Friday trading card deals: Save on Pok\u00e9mon, Magic: The Gathering, and Yu-Gi-Oh!",
-        "New Pok\u00e9mon TCG Release Unveiled For January 2027, Before Flowing Fists"
+        "Pokemon TCG Collection with a mostly completed Pokédex towards the end",
+        "The best early Black Friday trading card deals: Save on Pokémon, Magic: The Gathering, and Yu-Gi-Oh!",
+        "New Pokémon TCG Release Unveiled For January 2027, Before Flowing Fists"
       ]
     },
     "onepiece": {
@@ -4132,8 +4196,8 @@
       "sample": [
         "One Piece OP-18 Card List: The Dominance of God",
         "OP-18 Roronoa Zoro (OP18-092): Broken for Red/Black Sabo?",
-        "Bandai Namco Cross Store Birmingham: What\u2019s Inside, Opening Hours and How to Find It",
-        "Bandai Namco Cross Store Camden: What\u2019s Inside, Opening Hours and How to Find It",
+        "Bandai Namco Cross Store Birmingham: What’s Inside, Opening Hours and How to Find It",
+        "Bandai Namco Cross Store Camden: What’s Inside, Opening Hours and How to Find It",
         "One Piece Card Game November Booster Packs Reveal (Release Date, Price, and Details)",
         "One Piece OP-18 The Dominance of God lands November 20, with Water Seven and the Holy Knights of God",
         "OP-18 Franky Deck List: Best Early Cards, Combos & Build Ideas",
@@ -4148,13 +4212,13 @@
       "hits": 5,
       "method": "simple headline lexicon (pos/neg word counts, shrunk toward 50)",
       "sample": [
-        "Video Development Diary Teases Netflix\u2019s \u2018Magic The Gathering\u2019 Series \u2018Planeswalker,\u2019 Coming In 2027",
+        "Video Development Diary Teases Netflix’s ‘Magic The Gathering’ Series ‘Planeswalker,’ Coming In 2027",
         "After Years of Delays, Netflix Unveils Magic the Gathering Planeswalker Series for 2027",
         "Planeswalker, Netflix's Magic: The Gathering animated series, will have a different art style for each plane",
-        "Magic: The Gathering\u2019s First Signed Star Trek Card Has Been Pulled",
-        "Magic: The Gathering Star Trek Perfectly Captures the Sci-Fi Show\u2019s Most Brutal Running Joke",
+        "Magic: The Gathering’s First Signed Star Trek Card Has Been Pulled",
+        "Magic: The Gathering Star Trek Perfectly Captures the Sci-Fi Show’s Most Brutal Running Joke",
         "Magic: The Gathering is getting a Netflix animated series. For real this time.",
-        "Sneak Peek: Netflix Reveals First Images from \u2018Planeswalker,\u2019 Its 2027 'Magic the Gathering' Series",
+        "Sneak Peek: Netflix Reveals First Images from ‘Planeswalker,’ Its 2027 'Magic the Gathering' Series",
         "Magic Is Bringing Back Its Most Controversial Creature Type"
       ]
     },
@@ -4185,7 +4249,7 @@
       "method": "simple headline lexicon (pos/neg word counts, shrunk toward 50)",
       "sample": [
         "Yu-Gi-Oh!'s Seto Kaiba Nendoroid Officially Returns Alongside New Blue-Eyes White Dragon",
-        "Yu-Gi-Oh! gains 16% as Pok\u00e9mon falls 8% in November market snapshot",
+        "Yu-Gi-Oh! gains 16% as Pokémon falls 8% in November market snapshot",
         "Yu-Gi-Oh! Tag Force GX",
         "Sponsored: 'Yu-Gi-Oh! TCG's' 'Glorious Victors' Brings New Strategies and Premium Rarities This December",
         "Yu-Gi-Oh! Tag Force GX - Official Gameplay Trailer",
@@ -4334,7 +4398,7 @@
           {
             "name": "Mega Rayquaza ex 141/103 Mega Hyper Rare",
             "usd": 222.23,
-            "chg": "DexHaul market Nov 14; was $349.35 on Nov 6 (\u221236%)",
+            "chg": "DexHaul market Nov 14; was $349.35 on Nov 6 (−36%)",
             "url": "https://www.dexhaul.com/prices/me06/141-mega-rayquaza-ex"
           },
           {
@@ -4353,7 +4417,7 @@
       },
       "onepiece": {
         "headline": "OP-18 The Dominance of God pre-orders (release Nov 20) + Heroines Vol. 2 cooling",
-        "source": "Kontora / OPCompare / TCG Meta / PokeWallet, Nov 7\u201314 2026",
+        "source": "Kontora / OPCompare / TCG Meta / PokeWallet, Nov 7–14 2026",
         "items": [
           {
             "name": "OP-18 booster box pre-order",
@@ -4395,18 +4459,18 @@
       },
       "lorcana": {
         "headline": "Hyperia City out Oct 23; My Adventure Book banned Nov 3",
-        "source": "TCG Meta, reads Nov 4\u20138 2026",
+        "source": "TCG Meta, reads Nov 4–8 2026",
         "items": [
           {
             "name": "My Adventure Book (banned Core Constructed)",
             "usd": 9.0,
-            "chg": "raw NM, up 28.6% over 7 days as of Nov 4 \u2014 unusual for a ban",
+            "chg": "raw NM, up 28.6% over 7 days as of Nov 4 — unusual for a ban",
             "url": "https://tcgmeta.io/news/tcg-week-in-one-read-delta-reign-lorcana-ban-rc-europe"
           },
           {
-            "name": "Hector Rivera \u2014 Worldwide Sensation (Enchanted) 232/204",
+            "name": "Hector Rivera — Worldwide Sensation (Enchanted) 232/204",
             "usd": 49.63,
-            "chg": "Enchanted foil, \u22122.5% (TCG Meta)",
+            "chg": "Enchanted foil, −2.5% (TCG Meta)",
             "url": "https://tcgmeta.io/news/tcg-week-in-one-read-delta-reign-lorcana-ban-rc-europe"
           }
         ]
@@ -4505,14 +4569,14 @@
           "hits": 5,
           "method": "simple headline lexicon (pos/neg word counts, shrunk toward 50)",
           "sample": [
-            "The best early Pok\u00e9mon Black Friday deals: Shop live deals on 30th Celebration, Delta Reign, and more",
-            "10 Most Valuable Mega Evolution Pok\u00e9mon Cards, Ranked by Price",
+            "The best early Pokémon Black Friday deals: Shop live deals on 30th Celebration, Delta Reign, and more",
+            "10 Most Valuable Mega Evolution Pokémon Cards, Ranked by Price",
             "Pokemon Tcg PSA Counterfeiting Scheme Could Be a Huge Problem for Collectors",
-            "10 Most Valuable Pok\u00e9mon Cards From 2026, Ranked by Price",
+            "10 Most Valuable Pokémon Cards From 2026, Ranked by Price",
             "Recapping the recent Pokemon TCG PH Controversy",
-            "Pokemon TCG Collection with a mostly completed Pok\u00e9dex towards the end",
-            "The best early Black Friday trading card deals: Save on Pok\u00e9mon, Magic: The Gathering, and Yu-Gi-Oh!",
-            "New Pok\u00e9mon TCG Release Unveiled For January 2027, Before Flowing Fists"
+            "Pokemon TCG Collection with a mostly completed Pokédex towards the end",
+            "The best early Black Friday trading card deals: Save on Pokémon, Magic: The Gathering, and Yu-Gi-Oh!",
+            "New Pokémon TCG Release Unveiled For January 2027, Before Flowing Fists"
           ]
         },
         "volume": {
@@ -4584,8 +4648,8 @@
           "sample": [
             "One Piece OP-18 Card List: The Dominance of God",
             "OP-18 Roronoa Zoro (OP18-092): Broken for Red/Black Sabo?",
-            "Bandai Namco Cross Store Birmingham: What\u2019s Inside, Opening Hours and How to Find It",
-            "Bandai Namco Cross Store Camden: What\u2019s Inside, Opening Hours and How to Find It",
+            "Bandai Namco Cross Store Birmingham: What’s Inside, Opening Hours and How to Find It",
+            "Bandai Namco Cross Store Camden: What’s Inside, Opening Hours and How to Find It",
             "One Piece Card Game November Booster Packs Reveal (Release Date, Price, and Details)",
             "One Piece OP-18 The Dominance of God lands November 20, with Water Seven and the Holy Knights of God",
             "OP-18 Franky Deck List: Best Early Cards, Combos & Build Ideas",
@@ -4659,13 +4723,13 @@
           "hits": 5,
           "method": "simple headline lexicon (pos/neg word counts, shrunk toward 50)",
           "sample": [
-            "Video Development Diary Teases Netflix\u2019s \u2018Magic The Gathering\u2019 Series \u2018Planeswalker,\u2019 Coming In 2027",
+            "Video Development Diary Teases Netflix’s ‘Magic The Gathering’ Series ‘Planeswalker,’ Coming In 2027",
             "After Years of Delays, Netflix Unveils Magic the Gathering Planeswalker Series for 2027",
             "Planeswalker, Netflix's Magic: The Gathering animated series, will have a different art style for each plane",
-            "Magic: The Gathering\u2019s First Signed Star Trek Card Has Been Pulled",
-            "Magic: The Gathering Star Trek Perfectly Captures the Sci-Fi Show\u2019s Most Brutal Running Joke",
+            "Magic: The Gathering’s First Signed Star Trek Card Has Been Pulled",
+            "Magic: The Gathering Star Trek Perfectly Captures the Sci-Fi Show’s Most Brutal Running Joke",
             "Magic: The Gathering is getting a Netflix animated series. For real this time.",
-            "Sneak Peek: Netflix Reveals First Images from \u2018Planeswalker,\u2019 Its 2027 'Magic the Gathering' Series",
+            "Sneak Peek: Netflix Reveals First Images from ‘Planeswalker,’ Its 2027 'Magic the Gathering' Series",
             "Magic Is Bringing Back Its Most Controversial Creature Type"
           ]
         },
@@ -4814,7 +4878,7 @@
           "method": "simple headline lexicon (pos/neg word counts, shrunk toward 50)",
           "sample": [
             "Yu-Gi-Oh!'s Seto Kaiba Nendoroid Officially Returns Alongside New Blue-Eyes White Dragon",
-            "Yu-Gi-Oh! gains 16% as Pok\u00e9mon falls 8% in November market snapshot",
+            "Yu-Gi-Oh! gains 16% as Pokémon falls 8% in November market snapshot",
             "Yu-Gi-Oh! Tag Force GX",
             "Sponsored: 'Yu-Gi-Oh! TCG's' 'Glorious Victors' Brings New Strategies and Premium Rarities This December",
             "Yu-Gi-Oh! Tag Force GX - Official Gameplay Trailer",
@@ -4838,7 +4902,7 @@
         "color": "#c6e01a"
       }
     },
-    "method": "Equal-weight average of five game scores. Each game score is a weighted mix of trend momentum (30%), headline sentiment (25%), 14-day news volume (20%), and monthly category price momentum (25%). Trend uses Google Trends worldwide interest (five queries compared on one 0\u2013100 scale) when available, otherwise Wikipedia pageviews (labeled). Scores are computed, never invented.",
+    "method": "Equal-weight average of five game scores. Each game score is a weighted mix of trend momentum (30%), headline sentiment (25%), 14-day news volume (20%), and monthly category price momentum (25%). Trend uses Google Trends worldwide interest (five queries compared on one 0–100 scale) when available, otherwise Wikipedia pageviews (labeled). Scores are computed, never invented.",
     "bands": [
       [
         24,
@@ -4870,12 +4934,27 @@
   "trending": {
     "pokemon": [
       {
-        "t": "Hot set: Mega Evolution \u2014 Delta Reign, out Nov 6. Headliner Mega Rayquaza ex.",
-        "src": "Storybook TCG / Pok\u00e9mon",
+        "t": "SNKRDUNK (15 Nov 2026): Japanese set ハドウシーカー releases 27 Nov, headlined by Mega Lucario Z ex, with Mega Garchomp Z ex and Mega Absol Z ex also confirmed. Pre-order and lottery roundup updated today.",
+        "src": "SNKRDUNK",
+        "url": "https://snkrdunk.com/articles/33599/"
+      },
+      {
+        "t": "SNKRDUNK (15 Nov): 30th CELEBRATION hit ranking — Mew R/RGB about ¥800,000 market, ¥900,000 buyback at SNKRDUNK Akihabara (15 Nov read). Lugia and Charizard reprints follow.",
+        "src": "SNKRDUNK",
+        "url": "https://snkrdunk.com/articles/30971/"
+      },
+      {
+        "t": "SNKRDUNK (15 Nov): MEGA special deck set (Mega Feraligatr / Dragonite / Gengar) market and card list, plus a Storm Emeralda reprint restock roundup, both updated today.",
+        "src": "SNKRDUNK",
+        "url": "https://snkrdunk.com/articles/33739/"
+      },
+      {
+        "t": "Hot set: Mega Evolution — Delta Reign, out Nov 6. Headliner Mega Rayquaza ex.",
+        "src": "Storybook TCG / Pokémon",
         "url": "https://storybooktcg.com/blogs/tcg-news/this-week-in-tcg-2026-11-09"
       },
       {
-        "t": "Chase: Mega Rayquaza ex SIR 138/103 $296.14 (Nov 13, down from $397.94 at launch). Gold Mega Hyper Rare 141/103 $222.23 on Nov 14 (DexHaul), \u221236% from $349.35 on Nov 6.",
+        "t": "Chase: Mega Rayquaza ex SIR 138/103 $296.14 (Nov 13, down from $397.94 at launch). Gold Mega Hyper Rare 141/103 $222.23 on Nov 14 (DexHaul), −36% from $349.35 on Nov 6.",
         "src": "PokeWallet / DexHaul",
         "url": "https://pokewallet.io/blog/pokemon-delta-reign-prices-week-1-dated"
       },
@@ -4890,12 +4969,22 @@
         "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBFc1p3ZVE4a09LcjNNX0s1a0NKd1IyMzg2VjdlSVBoZjczb0tya1h6UzBYamdBMFRab1dxNEJlaWxPQkVkeVdVR1FNbUI0ckphMDY5WjNLdnJKTnFfQVhXZlJvcmllcjhtbk81ZXJjZVBwYnJ2YXc?oc=5"
       },
       {
-        "t": "Category index \u22128% over the past month (GempireCards, Nov 14).",
+        "t": "Category index −8% over the past month (GempireCards, Nov 14).",
         "src": "GempireCards",
         "url": "https://www.gempirecards.com/news/november-2026-tcg-market-update"
       }
     ],
     "onepiece": [
+      {
+        "t": "SNKRDUNK (15 Nov 2026): Japanese OP-18 神の支配 (The Dominance of God) pre-order and lottery roundup, updated today.",
+        "src": "SNKRDUNK",
+        "url": "https://snkrdunk.com/articles/33504/"
+      },
+      {
+        "t": "SNKRDUNK: Heroines Edition vol.2 hit-card guide is still on their popular-articles list.",
+        "src": "SNKRDUNK",
+        "url": "https://snkrdunk.com/articles/33110/"
+      },
       {
         "t": "Next set: OP-18 The Dominance of God, English release Nov 20. Water Seven + Holy Knights of God; Saint Gunko and Saint Shamrock debut.",
         "src": "Storybook TCG / Bandai",
@@ -4907,19 +4996,19 @@
         "url": "https://kontoramarket.com/guides/one-piece-op18-release-date-card-list"
       },
       {
-        "t": "Sealed: OP-18 box pre-orders ~$218.79\u2013$219.24 (Nov 13), down 21% from $277.62 on Nov 5. MSRP is $119.76 (24 \u00d7 $4.99).",
+        "t": "Sealed: OP-18 box pre-orders ~$218.79–$219.24 (Nov 13), down 21% from $277.62 on Nov 5. MSRP is $119.76 (24 × $4.99).",
         "src": "OPCompare / Kontora",
         "url": "https://kontoramarket.com/guides/one-piece-op18-release-date-card-list"
       },
       {
-        "t": "Still cooling: Heroines Edition Vol. 2 Nami (OP01-016) SP $467.79 sale-derived, \u221252.6% over 7 days (TCG Meta, Nov 8).",
+        "t": "Still cooling: Heroines Edition Vol. 2 Nami (OP01-016) SP $467.79 sale-derived, −52.6% over 7 days (TCG Meta, Nov 8).",
         "src": "TCG Meta",
         "url": "https://tcgmeta.io/news/tcg-week-in-one-read-delta-reign-lorcana-ban-rc-europe"
       }
     ],
     "mtg": [
       {
-        "t": "Live set: Magic: The Gathering | Star Trek \u2014 Arena Nov 10, tabletop Nov 13, same weekend as MagicCon: Atlanta and World Championship 32.",
+        "t": "Live set: Magic: The Gathering | Star Trek — Arena Nov 10, tabletop Nov 13, same weekend as MagicCon: Atlanta and World Championship 32.",
         "src": "Wizards of the Coast",
         "url": "https://magic.wizards.com/en/news/mtg-arena/announcements-november-9-2026"
       },
@@ -4946,12 +5035,12 @@
     ],
     "lorcana": [
       {
-        "t": "Ban: My Adventure Book was banned in Core Constructed on Nov 3. Sale-derived price $9.00 raw NM on Nov 4, up 28.6% over 7 days \u2014 unusual for a banned card.",
+        "t": "Ban: My Adventure Book was banned in Core Constructed on Nov 3. Sale-derived price $9.00 raw NM on Nov 4, up 28.6% over 7 days — unusual for a banned card.",
         "src": "TCG Meta",
         "url": "https://tcgmeta.io/news/tcg-week-in-one-read-delta-reign-lorcana-ban-rc-europe"
       },
       {
-        "t": "Hot set: Hyperia City (Set 14), last Lorcana release of 2026 (Oct 23), including Coco glimmers. H\u00e9ctor Rivera \u2014 Worldwide Sensation (Enchanted) 232/204 $49.63, \u22122.5%.",
+        "t": "Hot set: Hyperia City (Set 14), last Lorcana release of 2026 (Oct 23), including Coco glimmers. Héctor Rivera — Worldwide Sensation (Enchanted) 232/204 $49.63, −2.5%.",
         "src": "TCG Meta / Storybook TCG",
         "url": "https://tcgmeta.io/news/tcg-week-in-one-read-delta-reign-lorcana-ban-rc-europe"
       },
@@ -4961,19 +5050,19 @@
         "url": "https://storybooktcg.com/blogs/tcg-news/this-week-in-tcg-2026-11-09"
       },
       {
-        "t": "Play: Disney Lorcana Challenge in London, Nov 13\u201315. Category index \u22124% over the past month.",
+        "t": "Play: Disney Lorcana Challenge in London, Nov 13–15. Category index −4% over the past month.",
         "src": "TCG Meta / GempireCards",
         "url": "https://www.gempirecards.com/news/november-2026-tcg-market-update"
       }
     ],
     "yugioh": [
       {
-        "t": "Hot set: Magnificent Maestros launched Nov 12 \u2014 18 reimagined maestro cards (Blue-Eyes, Cyber End Dragon and more), extra extended-art and Grand Master Rares.",
+        "t": "Hot set: Magnificent Maestros launched Nov 12 — 18 reimagined maestro cards (Blue-Eyes, Cyber End Dragon and more), extra extended-art and Grand Master Rares.",
         "src": "Konami",
         "url": "https://www.konami.com/games/eu/en/topics/19372/"
       },
       {
-        "t": "The tape: Yu-Gi-Oh! category index +16% over the past month, +47% over 3 months, +140% over the past year, while Pok\u00e9mon was \u22128% on the month (GempireCards, Nov 14).",
+        "t": "The tape: Yu-Gi-Oh! category index +16% over the past month, +47% over 3 months, +140% over the past year, while Pokémon was −8% on the month (GempireCards, Nov 14).",
         "src": "GempireCards",
         "url": "https://www.gempirecards.com/news/november-2026-tcg-market-update"
       },
@@ -4986,6 +5075,11 @@
         "t": "Format: the Perfectron Hydradrive Dragon change from the Oct 19 Forbidden & Limited list took effect Nov 11.",
         "src": "TCG Meta",
         "url": "https://tcgmeta.io/news/tcg-week-in-one-read-delta-reign-lorcana-ban-rc-europe"
+      },
+      {
+        "t": "SNKRDUNK (31 Oct 2026): IMMORTAL PHOENIX launch-day hit-card opening prices (Japanese OCG booster, out 31 Oct).",
+        "src": "SNKRDUNK",
+        "url": "https://snkrdunk.com/articles/33647/"
       }
     ]
   },

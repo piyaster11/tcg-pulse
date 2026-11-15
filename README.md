@@ -6,7 +6,7 @@ A TCG-styled dashboard for **Pokémon**, **One Piece Card Game**, **Magic: The G
 
 ## What’s real vs a proxy
 
-- **Headlines** — public Google News RSS plus official/sourced articles (Konami, Wizards, GempireCards, TCG Meta, PokeWallet, etc.), with links.
+- **Headlines** — public Google News RSS plus official/sourced articles (Konami, Wizards, GempireCards, TCG Meta, PokeWallet, **SNKRDUNK**, etc.), with links.
 - **Category price momentum** — GempireCards November 2026 market snapshot (published 14 Nov 2026): Yu-Gi-Oh! +16%, MTG +1%, One Piece −3%, Lorcana −4%, Pokémon −8% over the past month.
 - **Live MTG singles** — Scryfall USD for the Star Trek set, fetched with the snapshot.
 - **Dated chase / sealed prices** — cited to PokeWallet, DexHaul, Kontora, TCG Meta, with the date of the read.
@@ -32,4 +32,4 @@ This repo does not modify the market dashboard or the NVIDIA Erection Index.
 
 ## Theme
 
-Dark foil card-frame layout (Cinzel / Outfit / JetBrains Mono).
+Colourful Pokémon-style pixel theme (Press Start 2P + VT323, Game Boy dialog boxes, HP-style meters).

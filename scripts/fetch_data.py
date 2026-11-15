@@ -301,6 +301,70 @@ def news_volume_score(gid, items):
     return {"score": round(max(0, min(100, score)), 1), "n": n, "avg": round(avg, 1),
             "note": f"{n} headlines in 14d vs {avg:.1f} game average"}
 
+
+def fetch_snkrdunk():
+    """Pull TCG editorial articles from the SNKRDUNK homepage (articles URL redirects here)."""
+    import re
+    from html import unescape
+    items, status = [], "fail"
+    try:
+        raw = get("https://snkrdunk.com/", {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+                                            "Accept-Language": "ja,en;q=0.8"})
+        text = raw.decode("utf-8", "replace")
+        TCG = re.compile(r"ポケカ|ポケモン|遊戯王|ワンピ|ONE PIECE|One Piece|ワンピースカード|ロルカナ|Lorcana|マジック|MTG|トレカ|デュエル")
+        GAME_RX = [
+            ("pokemon", re.compile(r"ポケカ|ポケモン")),
+            ("onepiece", re.compile(r"ワンピ|ONE PIECE|One Piece|ワンピース")),
+            ("yugioh", re.compile(r"遊戯王|デュエル")),
+            ("lorcana", re.compile(r"ロルカナ|Lorcana")),
+            ("mtg", re.compile(r"マジック|MTG|Magic:? The Gathering")),
+        ]
+        pat = re.compile(r'\\?"href\\?":\\?"/articles/(\d+)\\?"([\s\S]{0,2500}?)(?=\\?"href\\?":\\?"/articles/|\Z)')
+        seen = set()
+        for m in pat.finditer(text):
+            aid, blob = m.group(1), m.group(2)
+            titles = []
+            for tm in re.finditer(r"_1Dxq6G_title\\?\"\s*,\s*\\?\"children\\?\":\\?\"([^\"]+)\"", blob):
+                titles.append(tm.group(1))
+            for tm in re.finditer(r"\\?\"alt\\?\":\\?\"([^\"]+)\"", blob):
+                titles.append(tm.group(1))
+            dates = []
+            for dm in re.finditer(r"_1Dxq6G_publishedAt[\s\S]{0,80}?children\\?\":\s*\[\s*\\?\"([^\"]+年[^\"]+日)\\?\"", blob):
+                dates.append(dm.group(1))
+            clean = []
+            for s in titles:
+                s = unescape(s)
+                s = re.split(r'"\s*,\s*"width"|"}],', s)[0].strip().rstrip("\\")
+                if 8 <= len(s) <= 160 and "className" not in s and not s.startswith("http"):
+                    clean.append(s)
+            if not clean:
+                continue
+            title = min(clean, key=len)
+            if not TCG.search(title) or aid in seen:
+                continue
+            seen.add(aid)
+            gid = "pokemon"
+            for g, rx in GAME_RX:
+                if rx.search(title):
+                    gid = g
+                    break
+            utc = NOW.strftime("%Y-%m-%dT%H:%M:%SZ")
+            if dates:
+                dm = re.search(r"(\d{4})年(\d{1,2})月(\d{1,2})日", dates[0])
+                if dm:
+                    y, mo, d = int(dm.group(1)), int(dm.group(2)), int(dm.group(3))
+                    # noon JST = 03:00 UTC
+                    utc = f"{y:04d}-{mo:02d}-{d:02d}T03:00:00Z"
+            items.append({"title": title, "source": "SNKRDUNK",
+                          "link": f"https://snkrdunk.com/articles/{aid}/",
+                          "utc": utc, "game": gid, "highlight": True, "breaking": False})
+        status = f"ok ({len(items)})"
+        log(f"SNKRDUNK {status}")
+    except Exception as e:
+        status = "fail: " + str(e)[:80]
+        log(f"SNKRDUNK FAIL: {e}")
+    return items, status
+
 def main():
     prev = json.loads(OUT.read_text()) if OUT.exists() else {}
     trends = fetch_trends()
@@ -309,6 +373,12 @@ def main():
         wiki = prev["wiki"]
         log("kept previous wiki series")
     news = fetch_news()
+    sndk_items, sndk_status = fetch_snkrdunk()
+    news.setdefault("feeds", {})["SNKRDUNK"] = sndk_status
+    if sndk_items:
+        # drop stale SNKRDUNK copies then prepend
+        others = [x for x in news.get("items") or [] if x.get("source") != "SNKRDUNK"]
+        news["items"] = sndk_items + others
     prices = fetch_scryfall()
     # keep curated dated prices / trending from previous snapshot if present
     if prev.get("prices", {}).get("curated"):

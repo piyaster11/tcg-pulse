@@ -1,124 +1,136 @@
 :root{
-  --bg:#07060c; --card:#100e18; --ink:#f4efe4; --mute:#9a917f;
-  --line:#2a2438; --gold:#e8c56a; --gold2:#f8e7b0; --goldd:#8a6a22;
-  --up:#3ee08a; --dn:#ff5d6c; --blue:#7eb6ff;
-  --pk:#ffcb05; --op:#ff3b3b; --mtg:#ff8c42; --lor:#7ec8e3; --ygo:#c084fc;
+  --ink:#1a1530; --paper:#fff7d6; --paper2:#ffe9a8; --mute:#4a4570;
+  --line:#1a1530; --sky:#2b6cb0; --sky2:#163a7a; --grass:#3fa34a; --grassd:#1e6b2a;
+  --gold:#ffcb05; --red:#ee1515; --blue:#3b4cca; --up:#148c3a; --dn:#d0122d;
+  --pk:#ee1515; --op:#e10600; --mtg:#ff8c42; --lor:#19b5e0; --ygo:#8b2be2;
+  --lcd:#0b1d12; --lcdt:#9dffb0;
 }
 *{box-sizing:border-box}
-html,body{margin:0;background:var(--bg);color:var(--ink);
-  font:16px/1.5 Outfit,system-ui,-apple-system,Segoe UI,sans-serif;
+html,body{margin:0;color:var(--ink);
+  font:22px/1.35 VT323,ui-monospace,Menlo,monospace;
   padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
-body{min-height:100vh;background:
-  radial-gradient(1200px 500px at 50% -10%, #2a1d0a55, transparent 60%),
-  radial-gradient(800px 400px at 100% 20%, #3b1d6a22, transparent 50%),
-  var(--bg)}
-.mono,.tick,.val,table{font-family:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace}
-a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
-header{padding:18px 16px 14px;border-bottom:1px solid var(--goldd);position:relative;overflow:hidden}
-header::after{content:"";position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(110deg,transparent 20%,#fff2 40%,#e8c56a22 50%,transparent 65%);
-  background-size:220% 100%;animation:holo 9s linear infinite}
-h1{margin:0;font:800 26px/1.1 Cinzel,Georgia,serif;letter-spacing:.14em;color:var(--gold2);
-  text-shadow:0 0 18px #e8c56a55;position:relative}
-.sub{color:var(--mute);font-size:13px;margin-top:4px;letter-spacing:.04em}
-.asof{color:var(--mute);font-size:12px;margin-top:6px}
-.live{display:inline-flex;align-items:center;gap:6px;color:var(--up);font:700 12px "JetBrains Mono",monospace;margin-left:8px}
-.live i{width:8px;height:8px;border-radius:50%;background:var(--up);animation:pu 1.6s infinite}
-@keyframes pu{50%{opacity:.3}}
-@keyframes holo{from{background-position:200% 0}to{background-position:-20% 0}}
-@media (prefers-reduced-motion:reduce){header::after,.card::after,.foil{animation:none!important}}
-.tape{overflow:hidden;background:#0c0a12;border-bottom:1px solid var(--line);white-space:nowrap}
-.tick{display:inline-block;padding:10px 0;animation:scroll 45s linear infinite}
-.tick span{margin-right:28px;font-size:13px}.tick b{color:var(--gold)}
+body{
+  min-height:100vh;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 15px, #00000010 15px 16px),
+    repeating-linear-gradient(0deg, transparent 0 15px, #00000010 15px 16px),
+    linear-gradient(180deg, var(--sky) 0 58%, #5ec8ff 58% 62%, var(--grass) 62% 86%, var(--grassd) 86%);
+  background-attachment:fixed;
+  image-rendering:pixelated;
+}
+.mono,.tick,.val,table,.hp-meta,.asof{font-family:VT323,ui-monospace,Menlo,monospace}
+a{color:#1040b0;text-decoration:none}a:hover{text-decoration:underline}
+header{padding:18px 16px 14px 16px;position:relative;
+  background:linear-gradient(#1a1530,#2a1f55);
+  border-bottom:8px solid var(--gold);
+  box-shadow:0 8px 0 #1a1530;
+  color:#fff7d6}
+h1{margin:0;font:400 16px/1.5 "Press Start 2P",monospace;color:var(--gold);
+  text-shadow:3px 0 #ee1515,-3px 0 #3b4cca,0 3px #1a1530;padding-right:110px}
+.sub{color:#ffe9a8;font:22px VT323,monospace;margin-top:8px;letter-spacing:.02em}
+.asof{color:#c8b8ff;font-size:18px;margin-top:6px}
+.live{display:inline-flex;align-items:center;gap:6px;color:#54f08a;font:18px VT323,monospace;margin-left:8px}
+.live i{width:10px;height:10px;background:#54f08a;box-shadow:0 0 0 2px #0b1d12;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.live i,.tick{animation:none!important}}
+.theme-btn,.chart-btn{display:inline-flex;align-items:center;justify-content:center;
+  min-height:44px;padding:6px 10px;background:var(--paper);color:var(--ink);
+  border:4px solid #1a1530;box-shadow:4px 4px 0 #1a1530;font:400 8px/1 "Press Start 2P",monospace;
+  cursor:pointer;text-transform:uppercase}
+.theme-btn{position:absolute;right:12px;top:16px;z-index:2;background:var(--gold)}
+.theme-btn:active,.chart-btn:active{transform:translate(2px,2px);box-shadow:2px 2px 0 #1a1530}
+.tape{overflow:hidden;background:#1a1530;color:#fff7d6;border-bottom:4px solid var(--gold);white-space:nowrap}
+.tick{display:inline-block;padding:8px 0;animation:scroll 45s linear infinite;font-size:20px}
+.tick span{margin-right:28px}.tick b{color:var(--gold)}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-main{max-width:1140px;margin:auto;padding:14px;display:grid;gap:14px;grid-template-columns:minmax(0,1fr)}
-@media(min-width:760px){main{grid-template-columns:repeat(2,1fr)}.wide{grid-column:1/-1}h1{font-size:30px}}
-.card{background:
-    linear-gradient(#14121c,#0e0c14) padding-box,
-    linear-gradient(145deg,#f4e2a4,#8a6a22 35%,#fff1c0 55%,#5c4514) border-box;
-  border:2px solid transparent;border-radius:14px;padding:16px 16px 14px;position:relative;overflow:hidden}
-.card::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;
-  background:linear-gradient(115deg,transparent 25%,#ffffff0d 42%,#bfe9ff1a 50%,#ffe9a814 58%,transparent 72%);
-  background-size:220% 100%;animation:holo 11s linear infinite}
-.card[data-game=pokemon]{box-shadow:inset 3px 0 0 var(--pk)}
-.card[data-game=onepiece]{box-shadow:inset 3px 0 0 var(--op)}
-.card[data-game=mtg]{box-shadow:inset 3px 0 0 var(--mtg)}
-.card[data-game=lorcana]{box-shadow:inset 3px 0 0 var(--lor)}
-.card[data-game=yugioh]{box-shadow:inset 3px 0 0 var(--ygo)}
-h2{margin:0 0 10px;font:700 13px/1.3 "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);
+main{max-width:1140px;margin:auto;padding:14px;display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+@media(min-width:760px){main{grid-template-columns:repeat(2,1fr)}.wide{grid-column:1/-1}h1{font-size:18px;line-height:1.45}}
+.card{
+  background:var(--paper);
+  border:4px solid #1a1530;
+  box-shadow:0 0 0 4px var(--paper),0 0 0 8px #1a1530,8px 8px 0 #0a0a16;
+  padding:14px 14px 12px;position:relative;border-radius:0;
+}
+.card[data-game=pokemon]{box-shadow:0 0 0 4px #ffd3d3,0 0 0 8px var(--pk),8px 8px 0 #0a0a16}
+.card[data-game=onepiece]{box-shadow:0 0 0 4px #ffd0d0,0 0 0 8px var(--op),8px 8px 0 #0a0a16}
+.card[data-game=mtg]{box-shadow:0 0 0 4px #ffe1cc,0 0 0 8px var(--mtg),8px 8px 0 #0a0a16}
+.card[data-game=lorcana]{box-shadow:0 0 0 4px #c9f3ff,0 0 0 8px var(--lor),8px 8px 0 #0a0a16}
+.card[data-game=yugioh]{box-shadow:0 0 0 4px #ead6ff,0 0 0 8px var(--ygo),8px 8px 0 #0a0a16}
+h2{margin:0 0 10px;font:400 9px/1.6 "Press Start 2P",monospace;color:#1a1530;
   display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
-h3{margin:12px 0 6px;font:700 11px "JetBrains Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
-.bottom{font-size:16.5px;line-height:1.55}
+h3{margin:12px 0 6px;font:400 8px/1.5 "Press Start 2P",monospace;color:#5a2070}
+.bottom{font-size:22px;line-height:1.4}
 .up{color:var(--up)}.dn{color:var(--dn)}.zero{color:var(--mute)}
-.badge{font:700 11px/1 "JetBrains Mono",monospace;padding:5px 9px;border-radius:999px;white-space:nowrap;letter-spacing:.06em}
+.badge{font:400 8px/1.4 "Press Start 2P",monospace;padding:5px 7px;border:3px solid #1a1530;background:#fff;white-space:nowrap}
 .nums{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:12px}
 @media(max-width:700px){.nums{grid-template-columns:repeat(2,minmax(0,1fr))}.nums .num:last-child{grid-column:1/-1}}
-.num{min-width:0;background:#0a0910;border:1px solid var(--line);border-radius:10px;padding:10px 6px;text-align:center}
-.num b{display:block;color:var(--mute);font:600 10px "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
-.num .v{font:700 20px "JetBrains Mono",monospace}.num small{display:block;color:var(--mute);font-size:11px;margin-top:2px}
+.num{min-width:0;background:#fff;border:3px solid #1a1530;padding:8px 4px;text-align:center;box-shadow:3px 3px 0 #1a153044}
+.num b{display:block;color:var(--mute);font:400 7px/1.4 "Press Start 2P",monospace;letter-spacing:0}
+.num .v{font:400 16px/1.3 "Press Start 2P",monospace}.num small{display:block;color:var(--mute);font-size:18px}
 .gauge{display:block;margin:auto;max-width:360px;width:100%}
-.score{text-align:center;font:700 48px/1 "JetBrains Mono",monospace;margin-top:-6px}
-.band{text-align:center;font-weight:700;letter-spacing:.08em;margin:4px 0 10px}
-.bands{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;font-size:11px;margin:6px 0}
-.bands span{padding:3px 8px;border-radius:3px;background:#1a1624}
-.meters{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
-@media(max-width:759px){.meters{grid-template-columns:1fr}}
-.minis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:8px}
-@media(max-width:800px){.minis{grid-template-columns:repeat(2,minmax(0,1fr))}.minis .mini:last-child{grid-column:1/-1}}
-.mini{background:#0a0910;border:1px solid var(--line);border-radius:10px;padding:8px 6px 10px;text-align:center}
-.mini .nm{font:700 10px "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
-.mini .sc{font:700 22px "JetBrains Mono",monospace}
-.mini svg{width:100%;max-width:160px;height:auto;display:block;margin:auto}
-table{width:100%;border-collapse:collapse;font-size:13px}
-td{padding:8px 4px;border-top:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}
+.score{text-align:center;font:400 28px/1.2 "Press Start 2P",monospace;margin-top:2px}
+.band{text-align:center;font:400 10px/1.4 "Press Start 2P",monospace;letter-spacing:0;margin:6px 0 10px}
+.bands{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;font-size:16px;margin:6px 0}
+.bands span{padding:2px 6px;border:2px solid #1a1530;background:#fff}
+.minis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:10px}
+@media(max-width:800px){.minis{grid-template-columns:1fr}}
+.mini{background:#fff;border:3px solid #1a1530;padding:8px 8px 10px}
+.mini .nm{font:400 7px/1.4 "Press Start 2P",monospace;color:var(--mute);display:flex;align-items:center;gap:6px}
+.mini .sc{font:400 14px/1.2 "Press Start 2P",monospace}
+.mini .icon{width:24px;height:24px;max-width:24px}
+table{width:100%;border-collapse:collapse;font-size:20px}
+td{padding:8px 4px;border-top:3px solid #1a153022;vertical-align:top;overflow-wrap:anywhere}
 td.val{text-align:right;white-space:nowrap}
-.r,.disc{color:var(--mute);font-size:12px}.disc{margin-top:10px;line-height:1.45}
+h2 .r{font-family:VT323,ui-monospace,monospace!important;font-size:18px;font-weight:400}
+.r,.disc{color:var(--mute);font-size:18px;line-height:1.35;font-family:VT323,ui-monospace,monospace}.disc{margin-top:10px}
 .nw{list-style:none;padding:0;margin:0}
-.nw li{border-top:1px solid var(--line);margin:0}
+.nw li{border-top:3px solid #1a153022;margin:0}
 .nw a{display:block;padding:12px 2px;color:var(--ink);text-decoration:none;min-height:44px}
-.nw a:hover{color:var(--gold2)}
-.nw .tt{font-size:16px;line-height:1.35}
-.nw .mt{color:var(--mute);font:12px "JetBrains Mono",monospace;margin-top:4px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.chip{background:#2a1c00;color:var(--gold);border-radius:3px;padding:1px 6px}
-.chip.br{background:#c8102e;color:#fff}
-.chip.g-pokemon{background:#3b4cca33;color:var(--pk)}
-.chip.g-onepiece{background:#e1060033;color:#ff8a8a}
-.chip.g-mtg{background:#e8c56a22;color:var(--mtg)}
-.chip.g-lorcana{background:#7ec8e322;color:var(--lor)}
-.chip.g-yugioh{background:#c084fc22;color:var(--ygo)}
-.bkh{color:#ff8a8a;display:inline-flex;align-items:center;gap:8px}
-.dot{width:10px;height:10px;border-radius:50%;background:#ff3b3b;animation:pu 1.2s ease-in-out infinite;box-shadow:0 0 8px #ff3b3b}
+.nw a:hover{background:#ffe9a8}
+.nw .tt{font-size:22px;line-height:1.25}
+.nw .mt{color:var(--mute);font-size:18px;margin-top:4px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.chip{background:#1a1530;color:#fff7d6;padding:1px 6px;border:2px solid #1a1530}
+.chip.br{background:var(--red);color:#fff}
+.chip.g-pokemon{background:#ee1515;color:#fff}
+.chip.g-onepiece{background:#e10600;color:#fff}
+.chip.g-mtg{background:#ff8c42;color:#1a1530}
+.chip.g-lorcana{background:#19b5e0;color:#1a1530}
+.chip.g-yugioh{background:#8b2be2;color:#fff}
+.bkh{color:var(--red);display:inline-flex;align-items:center;gap:8px;font:400 9px/1.4 "Press Start 2P",monospace}
+.dot{width:12px;height:12px;background:var(--red);box-shadow:0 0 0 2px #1a1530;animation:blink 1s steps(2) infinite}
 .more{overflow:hidden;max-height:0;transition:max-height .45s ease}
 .more.open{max-height:5000px}
-.mbtn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:44px;margin-top:6px;
-  background:#15121c;color:var(--gold);border:1px solid var(--line);border-radius:8px;
-  font:700 13px "JetBrains Mono",monospace;cursor:pointer}
+.mbtn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:44px;margin-top:8px;
+  background:var(--gold);color:#1a1530;border:4px solid #1a1530;box-shadow:4px 4px 0 #1a1530;
+  font:400 8px "Press Start 2P",monospace;cursor:pointer}
 .mbtn .chev{display:inline-block;transition:transform .3s}
 .mbtn[aria-expanded=true] .chev{transform:rotate(180deg)}
-ul.tr{margin:0;padding-left:18px}ul.tr li{margin:7px 0;font-size:14.5px}
-.px{width:100%;border-collapse:collapse;font-size:13px;margin-top:4px}
-.px td{border-top:1px solid var(--line);padding:7px 4px}
+ul.tr{margin:0;padding-left:20px}ul.tr li{margin:7px 0;font-size:20px}
+.px{width:100%;border-collapse:collapse;font-size:20px;margin-top:4px}
+.px td{border-top:3px solid #1a153022;padding:7px 4px}
 .spark{width:100%;height:64px;display:block;margin:6px 0 2px}
-.tip{display:inline-flex;align-items:center;justify-content:center;color:var(--gold);font-size:13px;margin-left:4px;
-  min-width:24px;min-height:24px;cursor:help;vertical-align:middle;-webkit-tap-highlight-color:transparent}
-#tt{position:fixed;z-index:99;max-width:min(320px,calc(100vw - 24px));background:#1a1408;color:#f3e6cc;
-  border:1px solid var(--gold);border-radius:8px;padding:10px 12px;font:14px/1.45 Outfit,sans-serif;
-  box-shadow:0 6px 24px #000c;display:none;pointer-events:none}
-.legend{display:flex;flex-wrap:wrap;gap:10px 16px;justify-content:center;font:600 12px "JetBrains Mono",monospace;margin:6px 0 0}
-.legend i{display:inline-block;width:12px;height:3px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.tip{display:inline-flex;align-items:center;justify-content:center;color:#5a2070;font:400 8px "Press Start 2P",monospace;margin-left:4px;
+  min-width:28px;min-height:28px;cursor:help;vertical-align:middle;border:3px solid #1a1530;background:#fff;-webkit-tap-highlight-color:transparent}
+#tt{position:fixed;z-index:99;max-width:min(320px,calc(100vw - 24px));background:#1a1530;color:#fff7d6;
+  border:4px solid var(--gold);padding:10px 12px;font:20px/1.35 VT323,monospace;
+  box-shadow:6px 6px 0 #0a0a16;display:none;pointer-events:none}
+.legend{display:flex;flex-wrap:wrap;gap:10px 16px;justify-content:center;font-size:18px;margin:6px 0 0;color:var(--lcdt)}
+.legend i{display:inline-block;width:12px;height:8px;margin-right:6px;vertical-align:middle;border:2px solid #04110a}
 .chartwrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .chartwrap svg{display:block;width:100%;min-width:320px;height:auto}
-footer{text-align:center;color:var(--mute);font-size:12px;padding:24px 16px 32px;line-height:1.6}
-.sample{display:inline-block;background:#3a2c0b;color:var(--gold);border-radius:3px;padding:1px 6px;font-size:11px;margin-left:6px}
-
-/* extras so the foil theme still paints new controls */
-.theme-btn,.chart-btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:6px 10px;margin-left:8px;background:#15121c;color:var(--gold,#e8c56a);border:1px solid var(--line,#2a2438);border-radius:8px;font:700 11px "JetBrains Mono",monospace;cursor:pointer;letter-spacing:.06em}
-.theme-btn{position:absolute;right:16px;top:16px;z-index:2}
-.icon{width:24px;height:24px;vertical-align:middle;margin-right:8px;flex:none}
-.hprow{display:flex;align-items:center;gap:10px;margin:8px 0}
+.lcd{background:var(--lcd);color:var(--lcdt);border:6px solid #1a1530;box-shadow:inset 0 0 0 4px #3d6b45,4px 4px 0 #0a0a16;padding:10px}
+.lcd .r{color:#7fbf88}
+.chart-toggle{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 8px}
+.sample{display:inline-block;background:var(--gold);color:#1a1530;border:2px solid #1a1530;padding:1px 6px;font:400 7px/1.4 "Press Start 2P",monospace;margin-left:6px}
+footer{text-align:center;color:#fff7d6;font-size:18px;padding:24px 16px 36px;line-height:1.5;
+  text-shadow:2px 2px 0 #1a1530}
+footer a{color:var(--gold)}
+.hprow{display:flex;align-items:center;gap:10px;margin:6px 0 2px}
 .hp{flex:1;position:relative}
-.hp-well{position:relative;height:14px;border-radius:7px;background:linear-gradient(90deg,#ff4d4d 0 24%,#ff6a1c 24% 44%,#ffcf33 44% 55%,#c6e01a 55% 75%,#19e07a 75%);margin:4px 0}
-.hp-pin{position:absolute;top:-5px;width:4px;height:24px;background:#fff;border-radius:2px;transform:translateX(-2px)}
-.hp-meta{font:700 12px "JetBrains Mono",monospace;white-space:nowrap}
+.hp-well{position:relative;height:18px;border:4px solid #1a1530;background:#1a1530;box-shadow:inset 2px 2px 0 #0008;
+  background-image:linear-gradient(90deg,#ff4d4d 0 24%,#ff6a1c 24% 44%,#ffcf33 44% 55%,#c6e01a 55% 75%,#19e07a 75%)}
+.hp-pin{position:absolute;top:-6px;width:8px;height:26px;background:#fff;border:3px solid #1a1530;transform:translateX(-5px);image-rendering:pixelated}
+.hp-meta{font:400 8px/1 "Press Start 2P",monospace;white-space:nowrap;min-width:4.5em;text-align:right}
 .gicon{display:inline-flex;align-items:center;gap:8px}
-.lcd{background:#0a0910;border:1px solid var(--line,#2a2438);border-radius:10px;padding:10px}
+.icon{width:24px;height:24px;image-rendering:pixelated;flex:none;shape-rendering:crispEdges;vertical-align:middle}
+.dex{display:inline-block;background:var(--red);color:#fff;border:3px solid #1a1530;padding:2px 6px;font:400 8px "Press Start 2P",monospace;margin-right:6px}
