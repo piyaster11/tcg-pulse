@@ -32,4 +32,4 @@ This repo does not modify the market dashboard or the NVIDIA Erection Index.
 
 ## Theme
 
-The default look is a colourful Pokémon-style pixel theme (Press Start 2P + VT323, Game Boy dialog boxes, HP-style meters). A **FOIL THEME** button in the header switches back to the earlier dark foil layout.
+Dark foil card-frame layout (Cinzel / Outfit / JetBrains Mono).

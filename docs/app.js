@@ -130,20 +130,10 @@ function interestChart(D, mode){
     paths+=`<path d="${d}" fill="none" stroke="${GCOLOR[g.id]}" stroke-width="2.5"/>`;
   });
   const legend=games.map(g=>`<span><i style="background:${GCOLOR[g.id]}"></i>${esc(g.short)}</span>`).join('');
-  return `<div class="lcd"><div class="chartwrap"><svg viewBox="0 0 ${W} ${H}" font-family="VT323,monospace">${grid}${months}${paths}</svg></div>
+  return `<div class="lcd"><div class="chartwrap"><svg viewBox="0 0 ${W} ${H}" font-family="JetBrains Mono,monospace">${grid}${months}${paths}</svg></div>
     <div class="legend">${legend}</div></div>`;
 }
 
-function currentTheme(){ return localStorage.getItem('tcg-theme')||'pixel'; }
-function applyTheme(t){
-  const css=$('themeCss');
-  if(css) css.href = t==='foil' ? 'foil.css' : 'styles.css';
-  document.body.dataset.theme=t;
-  document.body.classList.toggle('theme-foil', t==='foil');
-  const b=$('themeBtn');
-  if(b) b.textContent = t==='pixel' ? 'FOIL THEME' : 'PIXEL THEME';
-  localStorage.setItem('tcg-theme', t);
-}
 
 function render(D){
   try{ $('asof').textContent = 'As of '+ (D.asOfIct || ict(D.asOf)); }catch(e){ERR(e)}
@@ -343,10 +333,6 @@ function render(D){
   }
 }
 
-// theme toggle (pixel is the default)
-applyTheme(currentTheme());
-const tb=$('themeBtn');
-if(tb) tb.addEventListener('click',()=>applyTheme(currentTheme()==='pixel'?'foil':'pixel'));
 
 fetch('data/dashboard.json?t='+Date.now(),{cache:'no-store'})
   .then(r=>{if(!r.ok)throw new Error('data '+r.status); return r.json()})
