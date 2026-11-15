@@ -130,7 +130,7 @@ function interestChart(D, mode){
     paths+=`<path d="${d}" fill="none" stroke="${GCOLOR[g.id]}" stroke-width="2.5"/>`;
   });
   const legend=games.map(g=>`<span><i style="background:${GCOLOR[g.id]}"></i>${esc(g.short)}</span>`).join('');
-  return `<div class="lcd"><div class="chartwrap"><svg viewBox="0 0 ${W} ${H}" font-family="VT323,monospace">${grid}${months}${paths}</svg></div>
+  return `<div class="lcd"><div class="chartwrap"><svg viewBox="0 0 ${W} ${H}" font-family="Inter,sans-serif">${grid}${months}${paths}</svg></div>
     <div class="legend">${legend}</div></div>`;
 }
 

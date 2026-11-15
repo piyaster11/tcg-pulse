@@ -302,6 +302,85 @@ def news_volume_score(gid, items):
             "note": f"{n} headlines in 14d vs {avg:.1f} game average"}
 
 
+
+def translate_snkrdunk_title(title):
+    """Map common SNKRDUNK TCG headline phrases into English (longest match first).
+    Leftover CJK is stripped of particles/punctuation; anything still untranslated
+    is left in place and logged so we never invent a gloss.
+    """
+    if not title:
+        return title
+    months = {1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5: "May", 6: "Jun",
+              7: "Jul", 8: "Aug", 9: "Sep", 10: "Oct", 11: "Nov", 12: "Dec"}
+    s = title
+    s = re.sub(
+        r"【(\d{1,2})/(\d{1,2})更新】",
+        lambda m: " (updated %d %s)" % (int(m.group(2)), months.get(int(m.group(1)), m.group(1))),
+        s,
+    )
+    pairs = [
+        ("30th CELEBRATION(30th セレブレーション)", "30th Celebration"),
+        ("30th CELEBRATION", "30th Celebration"),
+        ("30th セレブレーション", "30th Celebration"),
+        ("スペシャルデッキセットMEGA", "MEGA special deck set "),
+        ("スペシャルデッキセット", "special deck set "),
+        ("メガオーダイル", "Mega Feraligatr"),
+        ("メガカイリュー", "Mega Dragonite"),
+        ("メガゲンガー", "Mega Gengar"),
+        ("ハドウシーカー", "Hadow Seeker"),
+        ("ストームエメラルダ", "Storm Emeralda"),
+        ("神の支配", "The Dominance of God"),
+        ("予約・抽選情報まとめ", "pre-order and lottery roundup"),
+        ("相場情報と収録カード一覧", "market prices and card list"),
+        ("当たりランキング", "hit ranking"),
+        ("買取・相場価格と値段推移", "buyback and market-price history"),
+        ("買取相場", "buyback prices"),
+        ("封入率", "pull rates"),
+        ("予約抽選", "pre-orders and lottery"),
+        ("値段まとめ", "price guide"),
+        ("の再販はいつ？", ": when is the reprint? "),
+        ("再販入荷情報まとめ", "restock roundup"),
+        ("当たりカードの初動相場を一挙紹介！", "opening hit-card prices"),
+        ("当たりカードの初動相場を一挙紹介", "opening hit-card prices"),
+        ("当たりカード情報", "hit-card guide"),
+        ("本日発売！「IMMORTAL PHOENIX」", "Immortal Phoenix launches today — "),
+        ("本日発売！", "launches today — "),
+        ("【ポケカ30周年】", "Pokémon TCG 30th Anniversary: "),
+        ("【ポケカ新弾】", "Pokémon TCG: "),
+        ("【ポケカ】", "Pokémon TCG: "),
+        ("【ワンピースカード】", "One Piece Card Game: "),
+        ("【ワンピ新弾】", "One Piece Card Game: "),
+        ("【遊戯王OCG】", "Yu-Gi-Oh! OCG: "),
+        ("【遊戯王】", "Yu-Gi-Oh!: "),
+        ("ポケカ", "Pokémon TCG"),
+        ("遊戯王OCG", "Yu-Gi-Oh! OCG"),
+        ("遊戯王", "Yu-Gi-Oh!"),
+        ("ワンピースカード", "One Piece Card Game"),
+        ("ミュウ", "Mew"),
+    ]
+    pairs.sort(key=lambda x: len(x[0]), reverse=True)
+    for jp, en in pairs:
+        s = s.replace(jp, en)
+    # particles / punctuation left between English chunks
+    s = s.replace("「", '"').replace("」", '"').replace("『", '"').replace("』", '"')
+    s = s.replace("・", ", ").replace("、", ", ").replace("。", ". ")
+    s = s.replace("！", "! ").replace("？", "? ").replace("｜", " — ").replace("〜", "–")
+    for p in ("を", "に", "は", "が", "と", "で", "も", "へ", "から", "まで", "より", "の"):
+        s = s.replace(p, " ")
+    # slashes as list commas, but keep short codes like R/RGB
+    s = re.sub(r"(?<=[a-z)])/(?=[A-Za-z])", ", ", s)
+    s = re.sub(r"\s+([,.:;!?])", r"\1", s)
+    s = re.sub(r"(?<!\s)(\()", r" \1", s)
+    s = re.sub(r"([!?])(?=[A-Za-z\"])", r"\1 ", s)
+    s = re.sub(r"\s+—\s+", " — ", s)
+    s = re.sub(r'([A-Za-z0-9!?.])"(?=[A-Za-z])', r'\1" ', s)
+    s = re.sub(r"\s{2,}", " ", s)
+    s = s.strip(" ・/-–")
+    s = re.sub(r"\s{2,}", " ", s).strip()
+    s = s.replace(" : ", ": ")
+    return s
+
+
 def fetch_snkrdunk():
     """Pull TCG editorial articles from the SNKRDUNK homepage (articles URL redirects here)."""
     import re
@@ -355,7 +434,10 @@ def fetch_snkrdunk():
                     y, mo, d = int(dm.group(1)), int(dm.group(2)), int(dm.group(3))
                     # noon JST = 03:00 UTC
                     utc = f"{y:04d}-{mo:02d}-{d:02d}T03:00:00Z"
-            items.append({"title": title, "source": "SNKRDUNK",
+            en = translate_snkrdunk_title(title)
+            if re.search(r"[\u3040-\u30ff\u4e00-\u9fff]", en):
+                log(f"SNKRDUNK untranslated leftover: {en}")
+            items.append({"title": en, "source": "SNKRDUNK (JP)",
                           "link": f"https://snkrdunk.com/articles/{aid}/",
                           "utc": utc, "game": gid, "highlight": True, "breaking": False})
         status = f"ok ({len(items)})"
@@ -374,10 +456,10 @@ def main():
         log("kept previous wiki series")
     news = fetch_news()
     sndk_items, sndk_status = fetch_snkrdunk()
-    news.setdefault("feeds", {})["SNKRDUNK"] = sndk_status
+    news.setdefault("feeds", {})["SNKRDUNK (JP)"] = sndk_status
     if sndk_items:
         # drop stale SNKRDUNK copies then prepend
-        others = [x for x in news.get("items") or [] if x.get("source") != "SNKRDUNK"]
+        others = [x for x in news.get("items") or [] if not str(x.get("source") or "").startswith("SNKRDUNK")]
         news["items"] = sndk_items + others
     prices = fetch_scryfall()
     # keep curated dated prices / trending from previous snapshot if present

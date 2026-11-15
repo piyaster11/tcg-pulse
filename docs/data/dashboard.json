@@ -3757,12 +3757,12 @@
       "Yu-Gi-Oh": "ok (17)",
       "Wizards": "fail: HTTP Error 404: Not Found",
       "Pokemon.com": "fail: HTTP Error 404: Not Found",
-      "SNKRDUNK": "ok (8 editorial articles from snkrdunk.com homepage + confirmed article pages)"
+      "SNKRDUNK (JP)": "ok (8 editorial articles from snkrdunk.com homepage + confirmed article pages)"
     },
     "items": [
       {
-        "title": "【ポケカ】ハドウシーカーの予約・抽選情報まとめ【11/15更新】",
-        "source": "SNKRDUNK",
+        "title": "Pokémon TCG: Hadow Seeker pre-order and lottery roundup (updated 15 Nov)",
+        "source": "SNKRDUNK (JP)",
         "link": "https://snkrdunk.com/articles/33599/",
         "utc": "2026-11-15T10:22:52Z",
         "game": "pokemon",
@@ -3770,8 +3770,8 @@
         "breaking": false
       },
       {
-        "title": "【ポケカ】スペシャルデッキセットMEGA「メガオーダイル・メガカイリュー・メガゲンガー」相場情報と収録カード一覧",
-        "source": "SNKRDUNK",
+        "title": "Pokémon TCG: MEGA special deck set \"Mega Feraligatr, Mega Dragonite, Mega Gengar\" market prices and card list",
+        "source": "SNKRDUNK (JP)",
         "link": "https://snkrdunk.com/articles/33739/",
         "utc": "2026-11-15T10:13:08Z",
         "game": "pokemon",
@@ -3779,8 +3779,8 @@
         "breaking": false
       },
       {
-        "title": "【ワンピースカード】神の支配の予約・抽選情報まとめ【11/15更新】",
-        "source": "SNKRDUNK",
+        "title": "One Piece Card Game: The Dominance of God pre-order and lottery roundup (updated 15 Nov)",
+        "source": "SNKRDUNK (JP)",
         "link": "https://snkrdunk.com/articles/33504/",
         "utc": "2026-11-15T03:00:00Z",
         "game": "onepiece",
@@ -3788,8 +3788,8 @@
         "breaking": false
       },
       {
-        "title": "【ポケカ30周年】30th CELEBRATION(30th セレブレーション)の当たりランキング/買取相場/封入率/予約抽選/値段まとめ",
-        "source": "SNKRDUNK",
+        "title": "Pokémon TCG 30th Anniversary: 30th Celebration hit ranking, buyback prices, pull rates, pre-orders and lottery, price guide",
+        "source": "SNKRDUNK (JP)",
         "link": "https://snkrdunk.com/articles/30971/",
         "utc": "2026-11-15T03:00:00Z",
         "game": "pokemon",
@@ -3914,8 +3914,8 @@
         "breaking": false
       },
       {
-        "title": "【ポケカ】ストームエメラルダの再販はいつ？再販入荷情報まとめ【11/15更新】",
-        "source": "SNKRDUNK",
+        "title": "Pokémon TCG: Storm Emeralda: when is the reprint? restock roundup (updated 15 Nov)",
+        "source": "SNKRDUNK (JP)",
         "link": "https://snkrdunk.com/articles/32892/",
         "utc": "2026-11-15T03:00:00Z",
         "game": "pokemon",
@@ -3923,8 +3923,8 @@
         "breaking": false
       },
       {
-        "title": "【ポケカ】ミュウ R/RGBの買取・相場価格と値段推移｜30th CELEBRATION(30th セレブレーション)",
-        "source": "SNKRDUNK",
+        "title": "Pokémon TCG: Mew R/RGB buyback and market-price history — 30th Celebration",
+        "source": "SNKRDUNK (JP)",
         "link": "https://snkrdunk.com/articles/33322/",
         "utc": "2026-11-15T03:00:00Z",
         "game": "pokemon",
@@ -4049,8 +4049,8 @@
         "breaking": false
       },
       {
-        "title": "【ワンピ新弾】ONE PIECE Heroines Edition vol.2の当たりカード情報",
-        "source": "SNKRDUNK",
+        "title": "One Piece Card Game: ONE PIECE Heroines Edition vol.2 hit-card guide",
+        "source": "SNKRDUNK (JP)",
         "link": "https://snkrdunk.com/articles/33110/",
         "utc": "2026-11-13T07:44:00Z",
         "game": "onepiece",
@@ -4157,8 +4157,8 @@
         "breaking": false
       },
       {
-        "title": "【遊戯王OCG】本日発売！「IMMORTAL PHOENIX」当たりカードの初動相場を一挙紹介！",
-        "source": "SNKRDUNK",
+        "title": "Yu-Gi-Oh! OCG: Immortal Phoenix launches today — opening hit-card prices",
+        "source": "SNKRDUNK (JP)",
         "link": "https://snkrdunk.com/articles/33647/",
         "utc": "2026-10-31T03:09:00Z",
         "game": "yugioh",
@@ -4934,18 +4934,18 @@
   "trending": {
     "pokemon": [
       {
-        "t": "SNKRDUNK (15 Nov 2026): Japanese set ハドウシーカー releases 27 Nov, headlined by Mega Lucario Z ex, with Mega Garchomp Z ex and Mega Absol Z ex also confirmed. Pre-order and lottery roundup updated today.",
-        "src": "SNKRDUNK",
+        "t": "SNKRDUNK (JP) (15 Nov 2026): Japanese set Hadow Seeker releases 27 Nov, headlined by Mega Lucario Z ex, with Mega Garchomp Z ex and Mega Absol Z ex also confirmed. Pre-order and lottery roundup updated today.",
+        "src": "SNKRDUNK (JP)",
         "url": "https://snkrdunk.com/articles/33599/"
       },
       {
-        "t": "SNKRDUNK (15 Nov): 30th CELEBRATION hit ranking — Mew R/RGB about ¥800,000 market, ¥900,000 buyback at SNKRDUNK Akihabara (15 Nov read). Lugia and Charizard reprints follow.",
-        "src": "SNKRDUNK",
+        "t": "SNKRDUNK (JP) (15 Nov): 30th Celebration hit ranking — Mew R/RGB about ¥800,000 market, ¥900,000 buyback at SNKRDUNK Akihabara (15 Nov read). Lugia and Charizard reprints follow.",
+        "src": "SNKRDUNK (JP)",
         "url": "https://snkrdunk.com/articles/30971/"
       },
       {
-        "t": "SNKRDUNK (15 Nov): MEGA special deck set (Mega Feraligatr / Dragonite / Gengar) market and card list, plus a Storm Emeralda reprint restock roundup, both updated today.",
-        "src": "SNKRDUNK",
+        "t": "SNKRDUNK (JP) (15 Nov): MEGA special deck set (Mega Feraligatr / Dragonite / Gengar) market and card list, plus a Storm Emeralda reprint restock roundup, both updated today.",
+        "src": "SNKRDUNK (JP)",
         "url": "https://snkrdunk.com/articles/33739/"
       },
       {
@@ -4976,13 +4976,13 @@
     ],
     "onepiece": [
       {
-        "t": "SNKRDUNK (15 Nov 2026): Japanese OP-18 神の支配 (The Dominance of God) pre-order and lottery roundup, updated today.",
-        "src": "SNKRDUNK",
+        "t": "SNKRDUNK (JP) (15 Nov 2026): Japanese OP-18 The Dominance of God pre-order and lottery roundup, updated today.",
+        "src": "SNKRDUNK (JP)",
         "url": "https://snkrdunk.com/articles/33504/"
       },
       {
-        "t": "SNKRDUNK: Heroines Edition vol.2 hit-card guide is still on their popular-articles list.",
-        "src": "SNKRDUNK",
+        "t": "SNKRDUNK (JP): Heroines Edition vol.2 hit-card guide is still on their popular-articles list.",
+        "src": "SNKRDUNK (JP)",
         "url": "https://snkrdunk.com/articles/33110/"
       },
       {
@@ -5077,8 +5077,8 @@
         "url": "https://tcgmeta.io/news/tcg-week-in-one-read-delta-reign-lorcana-ban-rc-europe"
       },
       {
-        "t": "SNKRDUNK (31 Oct 2026): IMMORTAL PHOENIX launch-day hit-card opening prices (Japanese OCG booster, out 31 Oct).",
-        "src": "SNKRDUNK",
+        "t": "SNKRDUNK (JP) (31 Oct 2026): Immortal Phoenix launch-day hit-card opening prices (Japanese OCG booster, out 31 Oct).",
+        "src": "SNKRDUNK (JP)",
         "url": "https://snkrdunk.com/articles/33647/"
       }
     ]
